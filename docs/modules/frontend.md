@@ -4,5 +4,5 @@ Frontend module consists of fully customizable staking apps which stakers and va
 
 | App  |  Description |
 |---|---|
-| [ETH LSD App](../components/ethlsdapp.html) | a user interface for ETH LSD users to stake, unstake and claim their rewards |
-| [ETH LSD Validator App](../components/ethlsd_validator_app.html) | a user interface for ETH LSD validators to participate and monitor rewards |
+| [ETH LSD App](../architecture/components/ethlsdapp.html) | a user interface for ETH LSD users to stake, unstake and claim their rewards |
+| [ETH LSD Validator App](../architecture/components/ethlsd_validator_app.html) | a user interface for ETH LSD validators to participate and monitor rewards |

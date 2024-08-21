@@ -4,10 +4,6 @@
 
 StaFi LSD Stack is a package of Development Kits(DKs) that support the construction of LSD in Layer1s. The DKs consists of Application DK(ADK) and Chain DK(CDK), ADK is mainly built for launching a LST in the contract layer of a chain, and CDK is used to build a chain module that enables a chain to issue a LST natively. Both solutions include a backend and a frontend, the frontend is built for the interactions, the backend includes contracts and services.
 
-## Application Development Kit(ADK)
-
-The ADK module enables developers to launch a LST upon in the contract layer of a chain, it is contract based, now it can support to issue [ETH LST](/docs/architecture/components/getstarted.html), [EVM LST](/docs/develop_evm_lsd/getstarted.html) and [Cosmos LST](/docs/develop_cosmos_lsd/getstarted.html) and other VM LSTs in the chain. In the ecosystem, LSTs have more abundant interoperability and composability with the projects that also built upon the chain. These solutions are different based on the chain structure, developers can review details in the following parts.
-
 ## Chain Development Kit(CDK)
 
 The CDK is a builtin module that enables a chain to release its own LST natively, it is chain based. The StaFi LSD pallet is one of an example and it is a builtin module of the Substrate framework, independent chain that bases on the Substrate can merge the pallet and release a LST in their blockchains.

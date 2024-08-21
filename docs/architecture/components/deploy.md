@@ -7,7 +7,7 @@ This guide provides a step-by-step script to deploy the ETH LSD stack, without k
 
 61 Lab have made [Stack App](https://stack-app.stafi.io/) for project parties to deploy their LSD network contracts.
 
-<!-- ![](/image/ethlsd/onboarding_homepage.png "Launchpad Homepage") -->
+![](/image/ethlsd/onboarding_homepage.png "Launchpad Homepage")
 
 In addition to *Stack App*, you can deploy contracts through explorer or source code: [See this doc](./deploy_lsd_network_contracts)
 
