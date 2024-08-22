@@ -4,7 +4,7 @@ Point system has become a new paradigm for protocol bootstrapping and growth. Un
 
 ## Compatibility
 
-Currently this module is compatible with ETH LSD, EMV LSD and LRT stack.
+Currently this module is compatible with PLS LSD, EMV LSD and LRT stack.
 
 ## Install Build Tools
 

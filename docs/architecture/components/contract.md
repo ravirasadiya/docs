@@ -94,7 +94,7 @@ lsdTokensOfCreater(address _creater) public view returns (address[] memory)
 
 # LsdToken.sol
 
-An ERC20-compatible token used to store and manage LSD Tokens. When users deposit ETH they will receive equivalent LSD tokens(rToken) in return.
+An ERC20-compatible token used to store and manage LSD Tokens. When users deposit PLS they will receive equivalent LSD tokens(rToken) in return.
 
 # NetworkBalances.sol
 
@@ -103,7 +103,7 @@ Manages deposits for nodes and users.
 Real-time tracking of critical balances in the network, related to actions such as proposals, deposits, and withdrawals.
 
 `rateChangeLimit`:
-- This parameter defines the limit for exchange rate changes from ETH to lsdToken.
+- This parameter defines the limit for exchange rate changes from PLS to lsdToken.
 - In the submitBalances function, when a new balance is provided, the contract calculates the change between the new exchange rate and the old exchange rate. If this change exceeds the limit set by rateChangeLimit, the submitted balance update will be rejected and an exception RateChangeOverLimit will be thrown.
 - In the initialization init function, rateChangeLimit is set to 11e14, which represents a 0.0011 or 0.11% change. In other words, if the difference between the new exchange rate and the old exchange rate is more than 0.11%, the update of the balance will be considered invalid.
 - default 11e14(0.0011)
@@ -154,7 +154,7 @@ The trust node wallet address you add will also be the one configured in the SSV
 
 # UserDeposit.sol
 
-Allows ordinary users to deposit ETH and receive corresponding LSD Tokens.
+Allows ordinary users to deposit PLS and receive corresponding LSD Tokens.
 
 `minDeposit` - The minimum amount user can deposit into, admin is able to change the value by calling function `setMinDeposit(uint256)`.
 
@@ -162,7 +162,7 @@ Allows ordinary users to deposit ETH and receive corresponding LSD Tokens.
 
 Manages all logic related to network withdrawals.
 
-Allows users and nodes to withdraw their LSD Tokens or ETH from the system.
+Allows users and nodes to withdraw their LSD Tokens or PLS from the system.
 
 - `withdrawCycleSeconds`: This parameter defines the length of a withdrawal cycle in seconds. It's set to `86400` seconds, which equates to 24 hours, meaning each withdrawal cycle lasts for a day.
 - `platformCommissionRate`: This parameter defines the commission rate for the platform. The value here is set to `1e17`, which is 0.1 or 10% (since 1 ether in Solidity is represented as 1e18). This means that 10% of the amount being withdrawn is taken as a commission for the platform.
@@ -206,7 +206,7 @@ Platforms inevitably have their own parameters. We've compiled a list of the mos
 | address admin    | an account who administrate the whole network | we suggest platform use multi-sig account for security reason |
 | <br>**NetworkBalances contract**<br><br> | | |
 | uint256 updateBalancesEpochs             | a period of time in epoch determines how frequent voters calculate and submit new balances | 225 (equivalent to 24 hours), min value is 75(not recommended as its worthless)  |
-| uint256 rateChangeLimit      | a number represents the numerator in rate and the denominator is 1e18.<br>the exchange rate between ETH and LsdToken is vital for the system, to prevent accidental or violent changes, we introduce `rateChangeLimit` to keep the system safe | default is 11e14 (=0.11%) |
+| uint256 rateChangeLimit      | a number represents the numerator in rate and the denominator is 1e18.<br>the exchange rate between PLS and LsdToken is vital for the system, to prevent accidental or violent changes, we introduce `rateChangeLimit` to keep the system safe | default is 11e14 (=0.11%) |
 | <br>**NetworkWithdraw contract**<br><br> |  |   |
 | uint256 withdrawCycleSeconds     | a period of time in second determines how long a cycle last  | 86400 (equivalent to 24 hours), min value is 28800(not recommended as its worthless)  |
 | uint256<br>nodeCommissionRate       | a number represents the numerator in rate and the denominator is 1e18.<br>this value configures the proportion of the node rewards | 5e16 (denotes 5e16/1e18=5%)<br>(node commission = <br>total rewards * 5%)  |
@@ -215,8 +215,8 @@ Platforms inevitably have their own parameters. We've compiled a list of the mos
 | <br>**NodeDeposit contract**<br><br> | | |
 | bool soloNodeDepositEnabled         | a switch allows/disallows solo node participation | true |
 | bool trustNodeDepositEnabled        | a switch allows/disallows trust node participation  | true |
-| uint256 soloNodeDepositAmount         | an amount of node participation threshold in ETH as a validator<br>Solo validator will be enabled only if this parameter has been set   |  8, 12 or 16 ETH is an reasonable amount   |
+| uint256 soloNodeDepositAmount         | an amount of node participation threshold in PLS as a validator<br>Solo validator will be enabled only if this parameter has been set   |  8, 12 or 16 PLS is an reasonable amount   |
 | uint256 trustNodePubkeyNumberLimit    | a number which limits how many validators could a trust node run, the lower the number, the more decentralized system you got  | default is 100 |
 | <br>**UserDeposit contract**<br><br> | | |
-| uint256 minDeposit    | an amount of user participation threshold in ETH |   |
+| uint256 minDeposit    | an amount of user participation threshold in PLS |   |
 | bool depositEnabled   | a switch turns on/off deposit feature for users | true  |

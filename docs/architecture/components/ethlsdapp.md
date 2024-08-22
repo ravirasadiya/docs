@@ -1,10 +1,10 @@
-# ETH LSD App
+# PLS LSD App
 
-ETH LSD App is a user interface where users can stake, unstake and get latest information about the project. As a convention in web3 all API users interact with are directly from the RPC configured in wallet, so the app is a pure DApp.
+PLS LSD App is a user interface where users can stake, unstake and get latest information about the project. As a convention in web3 all API users interact with are directly from the RPC configured in wallet, so the app is a pure DApp.
 
-![ETH LSD App Homepage](/image/ethlsd/eth_lsd_app_homepage.png 'ETH LSD APP Homepage')
+![PLS LSD App Homepage](/image/ethlsd/eth_lsd_app_homepage.png 'PLS LSD APP Homepage')
 
-![ETH LSD App Notification Page](/image/ethlsd/eth_lsd_app_notification.png 'ETH LSD APP Notification Page')
+![PLS LSD App Notification Page](/image/ethlsd/eth_lsd_app_notification.png 'PLS LSD APP Notification Page')
 
 # Build your own LSD App
 
@@ -25,15 +25,15 @@ ETH LSD App is a user interface where users can stake, unstake and get latest in
 ```json
 // here are some config examples in app.json
 {
-  "appTitle": "ETH LSD App", // title of this app
+  "appTitle": "PLS LSD App", // title of this app
   "chainIcon": "/images/chain/ethereum.png",
   "token": {
     // token infos
-    "tokenName": "ETH", // name of the original token
+    "tokenName": "PLS", // name of the original token
     "lsdTokenName": "rETH", // name of the lsd token
     "supportChains": ["Ethereum", "Arbitrum", "Optimism", "Polygon"], // chains which lsd token can be supported
     "lsdTokenIconUri": "https://cdn.stafi.io/rtoken/logo/rETH.png", // icon link of lsd token
-    "tokenIcon": "/images/token/ETH.svg", // icon of  the stake token
+    "tokenIcon": "/images/token/PLS.svg", // icon of  the stake token
     "lsdTokenIcon": "/images/token/rETH.svg" // icon of lsd token
   },
   "unstake": {
@@ -94,15 +94,15 @@ ETH LSD App is a user interface where users can stake, unstake and get latest in
       ]
     },
     {
-      "title": "How much time is needed for ETH withdrawals?",
+      "title": "How much time is needed for PLS withdrawals?",
       "contents": [
         {
           "type": "text",
-          "content": "If the unstaking pool's ETH balance exceeds your withdrawal amount, you will instantly receive your ETH upon transaction approval.\n"
+          "content": "If the unstaking pool's PLS balance exceeds your withdrawal amount, you will instantly receive your PLS upon transaction approval.\n"
         },
         {
           "type": "text",
-          "content": "However, if the unstaking pool's ETH balance is less than your withdrawal amount, the withdrawal process will take 1-5 days. After this period, you can claim your ETH using the withdraw function.\n"
+          "content": "However, if the unstaking pool's PLS balance is less than your withdrawal amount, the withdrawal process will take 1-5 days. After this period, you can claim your PLS using the withdraw function.\n"
         }
       ]
     },

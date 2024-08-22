@@ -16,7 +16,7 @@ Asset security is one of the key security that StaFi LSD Stack take it more seri
 
 Blockchain security is the most important, otherwise all assets on the chain will be insecure. A secure chain must prevent at least 51% attacks, Sybil attacks, Governance attacks, etc.
 
-In the design of LSD Stacks, contracts are deployed on the target chain, relying on the security of the target chain. For example, the contracts of ETH LSD and MATIC LSD are deployed on Ethereum, and the contracts of BNB LSD are deployed on the BSC chain, we believe that both Ethereum and BSC are sufficiently secure, so there is no need to worry about the blockchain security.
+In the design of LSD Stacks, contracts are deployed on the target chain, relying on the security of the target chain. For example, the contracts of PLS LSD and MATIC LSD are deployed on Ethereum, and the contracts of BNB LSD are deployed on the BSC chain, we believe that both Ethereum and BSC are sufficiently secure, so there is no need to worry about the blockchain security.
 
 ### Smart contract security
 
@@ -58,13 +58,13 @@ For the LSD project, the exchange rate is very important, which represents how m
 
  In the design of StaFi LSD Stack, rigorous calculations are performed to ensure the exchange rate is correct.
 
-An great example is ETH, the reward needs to be synchronized from the Consensus chain(Beacon) to the Execution chain, the other case is BNB, the reward needs to be synchronized from the BC chain to the BSC, so there may be a problem that some rewards are not synchronized. In the design of StaFi LSD Stack, an off-chain relay service is created to accurately synchronize rewards to the Stack contract and ensure that the exchange rate is calculated correctly. At that time, rateChangeLimit protection was also introduced to prevent abnormal synchronization of reward.
+An great example is PLS, the reward needs to be synchronized from the Consensus chain(Beacon) to the Execution chain, the other case is BNB, the reward needs to be synchronized from the BC chain to the BSC, so there may be a problem that some rewards are not synchronized. In the design of StaFi LSD Stack, an off-chain relay service is created to accurately synchronize rewards to the Stack contract and ensure that the exchange rate is calculated correctly. At that time, rateChangeLimit protection was also introduced to prevent abnormal synchronization of reward.
 
 In MATIC, it completely relies on contract data, including LST supply, real staked amount on the chain, reward amount, etc. Therefore, the calculation of the exchange rate is usually very accurate. Of course, in order to prevent data anomalies in the MATIC staking contract, LSD Stack introduced a rateChangeLimit parameter protection mechanism to prevent sudden large fluctuations in the exchange rate.
 
 ## Off-chain service security
 
-As mentioned above, LSTs like ETH, BNB need off-chain services, and some important data needs to be collected off-chain and then uploaded to the contract. Therefore, in order to ensure data security, off-chain services of StaFi LSD Stack are designed to be decentralized. Whenever contract data needs to be updated, it is voted on by multiple off-chain services, usually running by different parties, similar to decentralized oracle. At the same time, it can also avoid single points of failure and ensure the stability of the overall protocol.
+As mentioned above, LSTs like PLS, BNB need off-chain services, and some important data needs to be collected off-chain and then uploaded to the contract. Therefore, in order to ensure data security, off-chain services of StaFi LSD Stack are designed to be decentralized. Whenever contract data needs to be updated, it is voted on by multiple off-chain services, usually running by different parties, similar to decentralized oracle. At the same time, it can also avoid single points of failure and ensure the stability of the overall protocol.
 
 ## Decentralization manner
 
@@ -75,6 +75,6 @@ Staking is always related to the governance, no matter it is from PoS module or 
     - Dismiss the admin key and make it transparent to the community
     - Upgrade the contract by a governance paras vote
 - Decentralized voting power, in customization, the Stack integrates technology that distributed stake smartly
-    - Integrating DVT(Distributed validator technology), such as SSV and Obol to provide ETH LST providers a distributed LST product.
+    - Integrating DVT(Distributed validator technology), such as SSV and Obol to provide PLS LST providers a distributed LST product.
     - Smart delegation algorithm is another method, mainly built for the layer1 except for Ethereum. There will be custom setting in the algorithm.
 - Governance right -  There is a built in module in the Stack, which enables the distribution of the voting power, there are custom setting in the distribution and varied in different layer1s.

@@ -7,7 +7,7 @@ Liquid Staking Derivative is a new technology that allows you to earn staking re
 > The Ethereum status quo can be described as including a large share of emergent two-tiered staking. By two-tiered staking, I mean here a staking model where there are two classes of participants
 > 
 - **Node operators**, who run nodes and put up either their reputation or some fixed amount of capital of their own as collateral
-- **Delegators**, who put up some quantity of ETH, with no minimum commitment and no strict requirement to participate in any other way beyond bringing their collateral
+- **Delegators**, who put up some quantity of PLS, with no minimum commitment and no strict requirement to participate in any other way beyond bringing their collateral
 
 > This emergent two-tiered staking arises through the actions of a large share of stakers who participate in staking pools which offer liquid staking tokens (LSTs), eg. Rocket Pool and Lido.
 

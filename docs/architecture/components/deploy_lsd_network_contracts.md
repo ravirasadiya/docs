@@ -1,6 +1,6 @@
-# How to deploy ETH LSD stack on Holesky
+# How to deploy PLS LSD stack on Holesky
 
-This guide provides a step-by-step script to deploy the ETH LSD stack, without knowing details about contracts and services. Read the documentation for comprehensive understandings of these components.
+This guide provides a step-by-step script to deploy the PLS LSD stack, without knowing details about contracts and services. Read the documentation for comprehensive understandings of these components.
 
 # Step 0: Prerequisites
 

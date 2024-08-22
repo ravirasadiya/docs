@@ -1,6 +1,6 @@
 # Get Started
 
-ETH LSD Stack is a complex system based on Ethereum, designed to provide a comprehensive set of solutions related to Eth2.0 validator deposits, network fee management, proposal voting, and the storage and withdrawal of funds for users and nodes.
+PLS LSD Stack is a complex system based on Ethereum, designed to provide a comprehensive set of solutions related to Eth2.0 validator deposits, network fee management, proposal voting, and the storage and withdrawal of funds for users and nodes.
 
 Currently, it mainly consists of three parts(SSV Client as a 4th part is optional)
 
@@ -20,7 +20,7 @@ Listen to Contract Events: The relay service will listen to contract events, suc
     
 ## Ejector Service
     
-Ejector service plays an important role in ETH LSD stack. Every validator should run an ejector service to properly handle the validator exiting process, as users are free to `unstake` and `withdraw`.
+Ejector service plays an important role in PLS LSD stack. Every validator should run an ejector service to properly handle the validator exiting process, as users are free to `unstake` and `withdraw`.
     
 *When use our SSV client service to run validators, you don't need to run the ejector service, cause it is embedded in the SSV client service by default.*
     

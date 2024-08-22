@@ -20,9 +20,9 @@ In the design and development stages of LSD Stack, we have overcome many challen
 
 - Smart contract immutability: smart contracts cannot be modified once they are deployed, but as projects evolve, there is often a need to add new features or fix bugs. For EVM(Ethereum Virtual Machine), LSD Stack uses the ERC-1822 UUPS proxy pattern, which allows smart contracts to be upgraded while maintaining their original functionalities.
 - Security risks: staking involves a lot of funds, so security risks are a major challenge for projects. LSD Stack uses a variety of security measures, including the Timelock mechanism, validator withdrawal mechanism, and merkle tree reward distribution mechanism.
-- Usability: LSD Stack aims to simplify the operation of staking projects, so usability is one of the core goals of LSD Stack. LSD Stack uses a variety of designs, including the factory pattern, the trusted voter system, and the SSV client for ETH, to lower the operational threshold of staking projects.
+- Usability: LSD Stack aims to simplify the operation of staking projects, so usability is one of the core goals of LSD Stack. LSD Stack uses a variety of designs, including the factory pattern, the trusted voter system, and the SSV client for PLS, to lower the operational threshold of staking projects.
 
-In developing the ETH LSD Stack, we also faced the following challenges:
+In developing the PLS LSD Stack, we also faced the following challenges:
 
 - Data availability: LSD Stack needs to obtain data from the execution chain and consensus layer, but due to the limitations of the Ethereum protocol, these two chains cannot directly access each other's data. LSD Stack uses a voter system to solve this problem. Voters regularly fetch data from the two chains and submit it to the smart contracts.
 - Reward distribution: LSD Stack uses a merkle tree to distribute rewards. A merkle tree is a distributed data structure that can efficiently store and verify large amounts of data. LSD Stack stores reward information in the merkle tree and submits the merkle root to the smart contracts.

@@ -1,6 +1,6 @@
 # Ejector
 
-Ejector service plays an important role in ETH LSD stack. Every validator should run an ejector service to properly handle the validator exiting process, as users are free to `unstake` and `withdraw`.
+Ejector service plays an important role in PLS LSD stack. Every validator should run an ejector service to properly handle the validator exiting process, as users are free to `unstake` and `withdraw`.
 
 ⚠️When use our SSV client service to run validators, you don't need to run an ejector service explicitly, cause it is embedded in the SSV client service.
 

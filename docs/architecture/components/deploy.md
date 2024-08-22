@@ -1,6 +1,6 @@
-# How to deploy ETH LSD stack
+# How to deploy PLS LSD stack
 
-This guide provides a step-by-step script to deploy the ETH LSD stack, without knowing details about contracts and services. Read the documentation for comprehensive understandings of these components.
+This guide provides a step-by-step script to deploy the PLS LSD stack, without knowing details about contracts and services. Read the documentation for comprehensive understandings of these components.
 
 
 # Step1. Deploy your LSD network contracts
@@ -44,7 +44,7 @@ Next: Run Your relay services with voters you have set.
 
 Standard LSD Token:
 - Provided by StaFi Stack
-- ERC-20 compatible
+- PRC-20 compatible
 - Ready to use
 
 Several Procedures required before using Custom LSD Token:
@@ -92,7 +92,7 @@ Rewards distribution is crucial to project parties. Commission fee of users is s
 
 ## Save all the information generated
 
-The lsd network has a set of smart contracts, so you should save all the information which you will interact frequently with, such as ETH LSD App, Validator App and Relay service.
+The lsd network has a set of smart contracts, so you should save all the information which you will interact frequently with, such as PLS LSD App, Validator App and Relay service.
 
 - LSD Network Factory address
 - LSD Token address

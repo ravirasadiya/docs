@@ -25,7 +25,7 @@ To check on the status of your validator, we recommend checking out the popular 
 
 ## Option 2. SSV
 
-ssv.network is a fully decentralized, open-source ETH staking network, based on Secret Shared Validator (SSV) technology, which enables the distributed operation of an Ethereum validator. The SSV protocol splits a validator key into multiple KeyShares and distributes them to non-trusting nodes run by operators. The nodes execute the validator's duties under a consensus mechanism providing fault tolerance, increased security, and decentralized risk for stakers.
+ssv.network is a fully decentralized, open-source PLS staking network, based on Secret Shared Validator (SSV) technology, which enables the distributed operation of an Ethereum validator. The SSV protocol splits a validator key into multiple KeyShares and distributes them to non-trusting nodes run by operators. The nodes execute the validator's duties under a consensus mechanism providing fault tolerance, increased security, and decentralized risk for stakers.
 
 More details on SSV portal: https://ssv.network/
 
@@ -38,10 +38,10 @@ More details on SSV portal: https://ssv.network/
 
 # Run validator by SSV client for trust validator
 
-ssv.network is a fully decentralized, open-source ETH staking network, based on Secret Shared Validator (SSV) technology, which enables the distributed operation of an Ethereum validator. The SSV protocol splits a validator key into multiple KeyShares and distributes them to non-trusting nodes run by operators. The nodes execute the validator's duties under a consensus mechanism providing fault tolerance, increased security, and decentralized risk for stakers.
+ssv.network is a fully decentralized, open-source PLS staking network, based on Secret Shared Validator (SSV) technology, which enables the distributed operation of an Ethereum validator. The SSV protocol splits a validator key into multiple KeyShares and distributes them to non-trusting nodes run by operators. The nodes execute the validator's duties under a consensus mechanism providing fault tolerance, increased security, and decentralized risk for stakers.
 
 ## SSV Client
-- Listen to whether there is enough ETH in the user pool. If so, automatically generate a new validator key, signature, deposit data, etc., based on the mnemonic, and interact with the node contract to stake ETH and become a validator.
+- Listen to whether there is enough PLS in the user pool. If so, automatically generate a new validator key, signature, deposit data, etc., based on the mnemonic, and interact with the node contract to stake PLS and become a validator.
 - Monitor SSV-related events and calculate the cluster's latest state.
 - Based on the configured operator, along with the validator key from step 1 and the cluster state from step 2, generate parameters such as signature, pubkeys, keyshare, etc., using SSV's related algorithms, and interact with the SSV contract to trigger RegisterValidator.
 - Monitor the validator's status. If it exits, interact with the SSV contract to trigger RemoveValidator.
@@ -49,7 +49,7 @@ ssv.network is a fully decentralized, open-source ETH staking network, based on 
 - Monitor the cluster balance. If it approaches the liquidation value, interact with the SSV contract to trigger Deposit to avoid liquidation. If it has already been liquidated, trigger Reactivate to recover the cluster.
 - Monitor the validator Ejected status. If an eject is needed, trigger ExitValidator on the beacon.
 
-- Listen to whether there is enough ETH in the user pool. If so, automatically generate a new validator key, signature, deposit data, etc., based on the mnemonic, and interact with the node contract to stake ETH and become a validator.
+- Listen to whether there is enough PLS in the user pool. If so, automatically generate a new validator key, signature, deposit data, etc., based on the mnemonic, and interact with the node contract to stake PLS and become a validator.
 - Monitor SSV-related events and calculate the cluster's latest state.
 - Based on the configured operator, along with the validator key from step 1 and the cluster state from step 2, generate parameters such as signature, pubkeys, keyshare, etc., using SSV's related algorithms, and interact with the SSV contract to trigger RegisterValidator.
 - Monitor the validator's status. If it exits, interact with the SSV contract to trigger RemoveValidator.
@@ -134,7 +134,7 @@ $ cp conf.ssv.template.toml config.toml
 |  *gasLimit* |   |   |  3000000  |
 |  *keystorePath* |  local directory path to store accounts keystore files |  | eth-lsd-ssv-keystore  |
 |  *targetOperators* | operator list you choose to run your future validators,<br> the size of the list must be 4, 7, 10 or 13 - Limited by SSV.network  <br>- [full operators list](https://explorer.ssv.network/operators)<br>- [SSV operators Selection Doc](https://docs.ssv.network/learn/stakers/validators/validator-onboarding#_jm9n7m464k0) | [1,2,3,4] |   |
-|  *poolReservedBalance* | an amount reserved for user pool liquidity, such as withdrawal |   |  20000000000000000000 (20 ETH)  |
+|  *poolReservedBalance* | an amount reserved for user pool liquidity, such as withdrawal |   |  20000000000000000000 (20 PLS)  |
 
 contracts section
 
