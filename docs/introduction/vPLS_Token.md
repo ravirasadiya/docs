@@ -1,6 +1,6 @@
 # vPLS Liquid Staking Token
 
-This document is intended for users and developers who want to learn more about vPLS or integrate vPLS.
+This document is intended for users, validators and developers who want to learn more about vPLS or integrate vPLS.
 
 ## What is vPLS
 
