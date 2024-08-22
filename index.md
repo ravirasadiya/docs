@@ -21,7 +21,7 @@ hero:
 features:
   - title: Vouch Protocol Documentation
     details: This guide is a living document, more information will be added regularly.
-    link: /docs/introduction/vPLS_token
+    link: /docs/introduction/vPLS_Token
   # - title: Introduction to LSDs
   #   details: Learn what Liquid Staking Derivatives and Liquid Staking Tokens are.
   #   link: /docs/architecture/ethlsd
