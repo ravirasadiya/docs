@@ -111,7 +111,7 @@ PLS LSD App is a user interface where users can stake, unstake and get latest in
       "contents": [
         {
           "type": "text",
-          "content": "To learn more about the exchange rate of rTokens and how they are calculated, please read:\n"
+          "content": "To learn more about the exchange rate of vPLS Tokens and how they are calculated, please read:\n"
         },
         {
           "type": "link",

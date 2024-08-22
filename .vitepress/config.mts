@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 import imageFigures from 'markdown-it-image-figures';
+// import mathjaxPlugin from '@vitepress/plugin-mathjax';
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,6 +16,19 @@ export default defineConfig({
       //{ text: 'Website', link: 'https://vouch.run' },
       { text: 'Launch User App', link: 'https://app.vouch.run' },
     ],
+    
+    // plugins: [
+    //   mathjaxPlugin({
+    //     // Optional MathJax configuration
+    //     options: {
+    //       displayAlign: 'center',
+    //       equationNumbers: {
+    //         autoNumber: 'all',
+    //         useTextFormats: true,
+    //       }
+    //     }
+    //   }),
+    // ],
 
     sidebar: {
       "/docs/": docs(),
@@ -35,6 +50,7 @@ export default defineConfig({
       md.use(imageFigures, {
         figcaption: 'title',
         copyAttrs: '^class$',
+        math: true ,
       });
     },
   },
@@ -52,8 +68,9 @@ function docs(){
       collapsed: false,
       items: [
         {text: "Get Started", link: "/docs/introduction/getstarted"},
+        {text: "vPLS (LST) Token", link: "/docs/introduction/vPLS_Token"},
         {text: "New to LSD Stack", link: "/docs/introduction/newtostack"},
-      ]
+    ]
     },
     // {
     //   text: "User Guide", //https://github.com/stafiprotocol/docs/tree/main/pages/stakingeth

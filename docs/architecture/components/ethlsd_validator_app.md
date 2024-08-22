@@ -78,7 +78,7 @@ PLS LSD Validator App is a user interface where node operators can participate i
       "contents": [
         {
           "type": "text",
-          "content": "To learn more about the exchange rate of rTokens and how they are calculated, please read:\n"
+          "content": "To learn more about the exchange rate of vPLS Tokens and how they are calculated, please read:\n"
         },
         {
           "type": "link",
