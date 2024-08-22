@@ -16,7 +16,7 @@ hero:
       link: /docs/introduction/getstarted
     - theme: alt
       text: Contribute
-      link: https://github.com/vouchrun/docs
+      link: https://github.com/vouchlsd/
 
 features:
   - title: Vouch Protocol Documentation
