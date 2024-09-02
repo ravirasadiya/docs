@@ -11,14 +11,20 @@ hero:
     src: /image/logo.svg
     alt: Vouch LSD Protocol
   actions:
+    # - theme: brand
+    #   text: Get Started
+    #   link: /docs/introduction/getstarted
+    # - theme: brand
+    #   text: Contribute
+    #   link: https://github.com/vouchrun/
     - theme: brand
-      text: Get Started
-      link: /docs/introduction/getstarted
-    - theme: alt
-      text: Contribute
-      link: https://github.com/vouchlsd/
+      text: Telegram Group
+      link: https://t.me/vouchrun
 
 features:
+  - title: Visit our Telegram Group
+    details: Be part of the Vouch Community and stay in touch with the latest news and updates.
+    link: https://t.me/vouchrun
   - title: Vouch Protocol Documentation
     details: This guide is a living document, more information will be added regularly.
     link: /docs/introduction/vPLS_Token
@@ -34,9 +40,6 @@ features:
   # - title: What is VOUCH Token 
   #   details: VOUCH is the platform goverance token of the Vouch protocol.  
   #   link: /docs/coming_soon
-  # - title: BTC LSD
-  #   details: Effortlessly deploy your own BTC LSD using Babylon technology. For the first time, bitcoin holders can earn yields from their idle bitcoins in a secure way no third-party trust, no bitcoin bridging to any other chain.
-  #   link: /docs/architecture/babylon_btc_lsd
   # - title: Solana LSD
   #   details: Deploy your own Solana LSD network and make profit by a few clicking
   #   link: /docs/architecture/solana_lsd
