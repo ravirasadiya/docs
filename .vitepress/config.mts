@@ -42,7 +42,7 @@ export default defineConfig({
       // label: 'Contents',
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vouchrun/docs' }
+      { icon: 'github', link: 'https://github.com/vouchrun/' }
     ],
   },
   markdown: {
