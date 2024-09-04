@@ -123,8 +123,8 @@ function docs(){
           //       {text: "Validator App", link: "/docs/architecture/components/ethlsd_validator_app"},
           //       {text: "Deploy", link: "/docs/architecture/components/deploy"},
           //       {text: "Point System", link: "/docs/architecture/components/point_system"},
-          //     ]
-          //   }
+              ]
+            }
           ]
         },
     {
