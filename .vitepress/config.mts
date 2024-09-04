@@ -127,7 +127,7 @@ function docs(){
             }
           ]
         },
-    {
+    // {
     //   text: "DAO",
     //   collapsed: true,
     //   items: [
