@@ -39,8 +39,8 @@ features:
   # - title: What is VOUCH Token 
   #   details: VOUCH is the platform goverance token of the Vouch protocol.  
   #   link: /docs/coming_soon
-  - title: Solana LSD
-    details: Deploy your own Solana LSD network and make profit by a few clicking
-    link: /docs/architecture/solana_lsd
+  # - title: Solana LSD
+  #   details: Deploy your own Solana LSD network and make profit by a few clicking
+  #   link: /docs/architecture/solana_lsd
 ---
 
