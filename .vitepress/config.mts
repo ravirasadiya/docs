@@ -67,9 +67,9 @@ function docs(){
       text: "Introduction",
       collapsed: false,
       items: [
-        {text: "Get Started", link: "/docs/introduction/getstarted"},
+        // {text: "Get Started", link: "/docs/introduction/getstarted"},
         {text: "vPLS (LST) Token", link: "/docs/introduction/vPLS_Token"},
-        {text: "New to LSD Stack", link: "/docs/introduction/newtostack"},
+        // {text: "New to LSD Stack", link: "/docs/introduction/newtostack"},
     ]
     },
     // {
@@ -89,17 +89,17 @@ function docs(){
           text: "Validator Staking Guide", // https://docs.stafi.io/ethvalidator/
           collapsed: false,
           items: [
-            {text: "Introduction", link: "/docs/validator_guide/introduction"},
+            // {text: "Introduction", link: "/docs/validator_guide/introduction"},
             {
               text: "Validator Setup Guide",
               collapsed: false,
               items: [
-                {text: "Prerequisites ", link: "/docs/validator_guide/prereqs"},
-                {text: "Generate Deposit/Staking File", link: "/docs/validator_guide/generate-deposit-staking-file"},
-                {text: "Deposit PLS", link: "/docs/validator_guide/deposit_pls"},
-                {text: "Complete PLS Staking", link: "/docs/validator_guide/complete_pls_staking"},
+                // {text: "Prerequisites ", link: "/docs/validator_guide/prereqs"},
+                // {text: "Generate Deposit/Staking File", link: "/docs/validator_guide/generate-deposit-staking-file"},
+                // {text: "Deposit PLS", link: "/docs/validator_guide/deposit_pls"},
+                // {text: "Complete PLS Staking", link: "/docs/validator_guide/complete_pls_staking"},
                 {text: "Run Ejector Client", link: "/docs/validator_guide/run_ejector_client"},
-                {text: "Exiting a Validator", link: "/docs/validator_guide/exiting_validator"}
+                // {text: "Exiting a Validator", link: "/docs/validator_guide/exiting_validator"}
               ]
             }
           ]
