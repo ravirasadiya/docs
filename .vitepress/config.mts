@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import imageFigures from 'markdown-it-image-figures';
-// import mathjaxPlugin from '@vitepress/plugin-mathjax';
 
 
 // https://vitepress.dev/reference/site-config
@@ -16,21 +15,7 @@ export default defineConfig({
       //{ text: 'Website', link: 'https://vouch.run' },
       { text: 'Launch User App', link: 'https://app.vouch.run' },
     ],
-    
-    // plugins: [
-    //   mathjaxPlugin({
-    //     // Optional MathJax configuration
-    //     options: {
-    //       displayAlign: 'center',
-    //       equationNumbers: {
-    //         autoNumber: 'all',
-    //         useTextFormats: true,
-    //       }
-    //     }
-    //   }),
-    // ],
-
-    sidebar: {
+     sidebar: {
       "/docs/": docs(),
     },
     search: {
@@ -46,11 +31,12 @@ export default defineConfig({
     ],
   },
   markdown: {
+    math: true,
     config: (md) => {
       md.use(imageFigures, {
         figcaption: 'title',
         copyAttrs: '^class$',
-        math: true ,
+        math: true,
       });
     },
   },

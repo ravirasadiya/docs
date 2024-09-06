@@ -28,14 +28,14 @@ There are two primary ways to get vPLS.
 
 You can stake your token through interacting with the Vouch staking contract directly or use the [Vouch vPLS App](https://app.vouch.run).
 
-Upon staking your native tokens, vPLS will be minted and sent to your designated wallet address based on the amount of native tokens staked (Qs) and the current exchange rate for vPLS (Cr).
+Upon staking your native tokens, vPLS will be minted and sent to your designated wallet address based on the amount of native tokens staked ( $Q_s$ ) and the current exchange rate for vPLS ( $C_r$ ).
 
-```Qr=Qs/Cr```
+`$Q_r=Q_s/C_r$`
 ​
-For example, if you stake 1.05 PLS and the current exchange rate for vPLS (Cr) is 1.05, you will receive 1 vPLS.
+For example, if you stake 1.05 PLS and the current exchange rate for vPLS ( $C_r$ ) is 1.05, you will receive 1 vPLS.
 
 ::: tip
-The exchange rate for vPLS (Cr) is always greater than 1, because it represents a staked amount of token that earns rewards.
+The exchange rate for vPLS ( $C_r$ ) is always greater than 1, because it represents a staked amount of token that earns rewards.
 :::
 
 ### Swap vPLS on PulseX or other DEXs
@@ -45,25 +45,25 @@ vPLS can be swaped for native tokens at market exchange rates on decentralized e
 If arbitrage and risk-free market-making decrease, it could lead to users receiving an exchange price for vPLS that is lower than their inherent value in DEXs.
 
 ## vPLS exchange rate
-The vPLS exchange rate (Cr) is determined by a number of factors, including:
-- The total amount of native token staked in the Staking Contract: Q*tsk*
-- The total amount of redeemed native token: Q*red*
-- The amount of staking rewards: Q*rew*
-- The amount of slash: Q*slh*
-- The amount of penalty: Q*pey*
-- The commission ratio: R*com*
-- The total amount of vPLS minted: M
-- The total amount of vPLS burned: N
+The vPLS exchange rate ( $Cr$ ) is determined by a number of factors, including:
+- The total amount of native token staked in the Staking Contract: $Q_{tsk}$
+- The total amount of redeemed native token: $Q_{red}$
+- The amount of staking rewards: $Q_{rew}$
+- The amount of slash: $Q_{slh}$
+- The amount of penalty: $Q_{pey}$
+- The commission ratio: $R_{com}$
+- The total amount of rToken minted: $M$
+- The total amount of rToken burned: $N$
 
 In general, the exchange rate is positively correlated with the staking income, which is influenced by these variables. The exact formula for calculating the vPLS exchange rate is as follows:
 
-> C*i*=[(Q*stk*-Q*red*)+(Q*rew*-Q*slh*-Q*pey*) * (1-R*com*)]*/(M-N)
+> $C_{i}={[\left(Q_{stk}-Q_{red}\right)+\left(Q_{rew}-Q_{slh}-Q_{pey}\right) *\left(1-R_{com}\right)]}/{(M-N)}$
 
 
 The vPLS exchange rate will be determined and announced by the system based on the status of Staking Reward Claims and the occurrence of Slash events on the original blockchain. This ensures that the vPLS exchange rate accurately reflects the current state and activity of the underlying network.
 
-::: info
-vPLS Exchange Rate Update Frequency = 6 Hours
+::: tip
+vPLS Exchange Rate Update Frequency = 12 Hours
 ::: 
 
 ## Risks
@@ -71,3 +71,4 @@ vPLS Exchange Rate Update Frequency = 6 Hours
 - **Slashing risk**: Vouch validators are required to stake a portion of their own funds as collateral, which helps to minimize the risk of loss to delegators in the event of a validator slashing event.
 - **Price risk**: Vouch's withdrawal restrictions make arbitrage and risk-free market-making impossible, which could lead to users receiving an exchange price for LSTs that is lower than their inherent value. The Vouch core team and community are committed to mitigating the risks associated with using Vouch and eliminating them entirely to the extent possible.
 - **Contract Security**: Vouch's staking contract code is open-sourced and audited, which helps to reduce the risk of contract failure.
+
