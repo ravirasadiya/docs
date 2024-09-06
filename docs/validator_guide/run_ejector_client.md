@@ -40,6 +40,15 @@ cd pls-lsd-ejector
 make install
 ```
 
+
+::: warning
+This will install the pls-lsd-ejector application in the default `GOPATH` location which is `~/go/bin`.
+
+If you wish to move the application simply copy it to the location of your choice e.g. `/blockchain/ejector`
+:::
+
+
+
 # Start Ejector service
 
 ## Config
