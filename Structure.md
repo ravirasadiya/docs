@@ -16,8 +16,9 @@
 ## Validator Staking Guide
 ```https://docs.stafi.io/ethvalidator/```
 ### Introduction
-### Validator Setup Guide
 #### Prerequisites 
+### Validator Setup Guide
+
 #### Generate Deposit/Staking File
 #### Deposit PLS
 #### Complete PLS Staking

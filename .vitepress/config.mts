@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import imageFigures from 'markdown-it-image-figures';
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 
 
 // https://vitepress.dev/reference/site-config
@@ -36,9 +37,9 @@ export default defineConfig({
       md.use(imageFigures, {
         figcaption: 'title',
         copyAttrs: '^class$',
-        math: true,
-      });
-    },
+      }),
+      md.use(tabsMarkdownPlugin);
+     },
   },
   ignoreDeadLinks: [
     // ignore all localhost links
@@ -72,22 +73,24 @@ function docs(){
     // },
 
         {
-          text: "Validator Staking Guide", // https://docs.stafi.io/ethvalidator/
+          text: "Validator Guide", // https://docs.stafi.io/ethvalidator/
           collapsed: false,
           items: [
-            // {text: "Introduction", link: "/docs/validator_guide/introduction"},
-            {
-              text: "Validator Setup Guide",
-              collapsed: false,
-              items: [
-                // {text: "Prerequisites ", link: "/docs/validator_guide/prereqs"},
-                // {text: "Generate Deposit/Staking File", link: "/docs/validator_guide/generate-deposit-staking-file"},
-                // {text: "Deposit PLS", link: "/docs/validator_guide/deposit_pls"},
-                // {text: "Complete PLS Staking", link: "/docs/validator_guide/complete_pls_staking"},
-                {text: "Run Ejector Client", link: "/docs/validator_guide/run_ejector_client"},
-                // {text: "Exiting a Validator", link: "/docs/validator_guide/exiting_validator"}
-              ]
-            }
+            {text: "Getting Started", link: "/docs/validator_guide/getting_started"},
+            {text: "Validator Staking Guide", link: "/docs/validator_guide/validator_staking_guide"},
+            {text: "pulse-staking-deposit-cli", link: "/docs/validator_guide/pulse-staking-deposit-cli"},
+            {text: "Ejector Client", link: "/docs/validator_guide/ejector_client"},
+            {text: "Exiting a Validator", link: "/docs/validator_guide/exiting_validators"},
+            // {
+            //   text: "Validator Staking",
+            //   collapsed: false,
+            //   items: [
+            //     {text: "Validator Staking Steps", link: "/docs/validator_guide/validator_staking_guide"},
+            //     {text: "pulse-staking-deposit-cli", link: "/docs/validator_guide/pulse-staking-deposit-cli"},
+            //     {text: "Ejector Client", link: "/docs/validator_guide/ejector_client"},
+            //     {text: "Exiting a Validator", link: "/docs/validator_guide/exiting_validators"}
+            //   ]
+            // }
           ]
         },
 

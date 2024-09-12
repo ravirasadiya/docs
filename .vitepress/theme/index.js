@@ -2,6 +2,8 @@ import DefaultTheme from 'vitepress/theme';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import mediumZoom from 'medium-zoom';
+import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
+//import { Steps, Tab, Tabs } from 'nextra-theme-docs';
 
 import './index.css';
 
@@ -22,4 +24,7 @@ export default {
       () => nextTick(() => initZoom())
     );
   },
+  enhanceApp({ app }) {
+    enhanceAppWithTabs(app)
+  }
 };

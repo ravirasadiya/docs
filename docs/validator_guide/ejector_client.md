@@ -1,4 +1,4 @@
-# Running an Ejector Client 
+# Ejector Client 
 
 The Ejector service plays an important role in PLS LSD stack. Every validator should run an ejector service to properly handle the validator exiting process, as users are free to `unstake` and `withdraw`.
 
