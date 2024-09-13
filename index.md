@@ -22,12 +22,31 @@ hero:
       link: https://t.me/vouchrun
 
 features:
-  - title: Vouch Protocol Documentation
+  - icon:
+     light: /image/book.svg
+     dark: /image/book-dark.svg
+     width: 90
+    title: Vouch Protocol Docs
     details: This guide is a living document, more information will be added regularly.
     link: /docs/introduction/vPLS_Token
-  - title: Visit our Telegram Group
+  - icon:
+     src: /image/TGLogo.svg
+     width: 82
+    title: Visit our Telegram Group
     details: Be part of the Vouch Community and stay in touch with the latest news and updates.
     link: https://t.me/vouchrun  # - title: Introduction to LSDs
+  - icon:
+      src: /image/video1.png
+      width: 150
+    title: Learn about Liquid Staking
+    details: Intrduction to liquid staking on Pulsechain in 6 minutes!
+    link: https://youtu.be/qidl4je6IAY?si=Iutv2fnz6WYam9BC
+  - icon:
+      src: /image/video2.png
+      width: 150
+    title: Understanding Vouch LSD
+    details: Understanding Vouch LSD Protocol in 9 minutes!
+    link: https://youtu.be/vZwRh15oPHM?si=VEM4am8cgxE9XRJQ
   #   details: Learn what Liquid Staking Derivatives and Liquid Staking Tokens are.
   #   link: /docs/architecture/ethlsd
   # - title: User Staking Guide
@@ -39,8 +58,7 @@ features:
   # - title: What is VOUCH Token 
   #   details: VOUCH is the platform goverance token of the Vouch protocol.  
   #   link: /docs/coming_soon
-  # - title: Solana LSD
-  #   details: Deploy your own Solana LSD network and make profit by a few clicking
-  #   link: /docs/architecture/solana_lsd
+
 ---
+
 

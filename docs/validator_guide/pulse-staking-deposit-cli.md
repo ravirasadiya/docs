@@ -1,10 +1,10 @@
 # Pulse-staking-deposit-cli Guide
 
-## Using deposit-cli to generate a key files
+## Using deposit-cli to generate key files
 
-Before you can participate as a Solo or Trusted Validator on the Vouch protocol, you need to generate the requried keystores and deposit files much like you would if you were operating a "normal" validator on the Pulsechain network. 
+Before you can participate as a Solo or Trusted Validator on the Vouch protocol, you need to generate the requried keystores and deposit files, much like you would if you were operating a "normal" validator on the Pulsechain network. 
 
-`pulse-staking-deposit-cli` is a tool for creating EIP-2335 format BLS12-381 keystores and a corresponding `deposit_data-*.json` file and `stake_data-*.json` file for use with the Vouch Protocol. This tool creates deposit files that are compatable with the Pulsechain Launchpad, however they are designed to be used exclusivly with the Vouch Protocol. 
+`pulse-staking-deposit-cli` is a tool for creating EIP-2335 format BLS12-381 keystores and a corresponding `deposit_data-*.json` file and `stake_data-*.json` file for use with the Vouch Protocol. This tool creates deposit files that are compatable with the Ethereum and Pulsechain Launchpads, however the output files are designed to be used exclusivly with the Vouch Protocol. 
 
 :warning: Do not use the generated deposit file with the offical Pulschain Launchpad site.
 
@@ -16,6 +16,8 @@ Please generate your keystores on your own safe, completely offline device, and 
 :::
 
 Github Repo：[pulse-staking-deposit-cli](https://github.com/Vouchrun/pulse-staking-deposit-cli)
+
+:bulb: Advanced instructions can be found in the [ReadMe](https://github.com/Vouchrun/pulse-staking-deposit-cli/blob/main/README.md) file on the Githup Repo.
 
 ### Step 1. Check your Python version
 Ensure you are using Python version >= Python3.8:
@@ -55,7 +57,7 @@ Or use the helper script:
 
 
 >[!CAUTION]
-> You MUST set your WITHDRAWAL address correctly when generating your Keys.
+> You MUST set your WITHDRAWAL address correctly to the `Network_Withdraw` contract when generating your Keys.
 
 Withdrawal Address set to the Vouch `Network_Withdraw` contract address
 
@@ -64,25 +66,17 @@ Node Prority Fee Address set to the Vouch `Fee_Pool` contract address
 :::tabs
 
 == Mainnet
-Withdraw Address: ```0xWITHDRAWAL```
+Withdraw Address Setting: ```0xWITHDRAWAL```
 
-Prority Fee Address: ```0xFEE_POOL```
+Prority Fee Address Setting: ```0xFEE_POOL```
 
 == Testnet
-Withdraw Address: ```0x555E33C8782A0CeF14d2e9064598CE991f58Bc74```
+Withdraw Address Setting: ```0x555E33C8782A0CeF14d2e9064598CE991f58Bc74```
 
-Prority Fee Address: ```0x4C14073Fa77e3028cDdC60bC593A8381119e9921```
+Prority Fee Address Setting: ```0x4C14073Fa77e3028cDdC60bC593A8381119e9921```
 :::
 
 
-
-/bradshawknox/pulse-staking-deposit-cli/validator_keys/keys/vouch.run
-
-**Note: Withdrawal Address Needs to be set to Withdrawal Contract Address**
-```0x555E33C8782A0CeF14d2e9064598CE991f58Bc74```
-
-**Note: Node Prority Fee Address Needs to be set to Fee Pool Contract Address**
-```0x4C14073Fa77e3028cDdC60bC593A8381119e9921```
 
 ```./deposit new-mnemonic --num_validators=3 --mnemonic_language=english --chain=pulsechain-testnet-v4```
 
@@ -117,37 +111,6 @@ Repeat your keystore password for confirmation:
 
 
 
-
-
-
-
-
-:::tabs
-
-== MACOS
-
-#### Intel Chips
-
-```shell
-wget https://raw.githubusercontent.com/stafiprotocol/stafi-bootstrap/master/eth2.0-deposit-cli/binary/mainnet/macos/deposit-darwin-amd64.tar.gz
-tar zxvf deposit-darwin-amd64.tar.gz
-```
-
-#### M1 Chips
-
-```shell
-wget https://raw.githubusercontent.com/stafiprotocol/stafi-bootstrap/master/eth2.0-deposit-cli/binary/mainnet/macos/deposit-darwin-arm64.tar.gz
-tar zxvf deposit-darwin-arm64.tar.gz
-```
-
-== Linux
-
-```shell
-wget https://raw.githubusercontent.com/stafiprotocol/stafi-bootstrap/master/eth2.0-deposit-cli/binary/mainnet/linux/deposit-ubuntu-18.04-x86_64.tar.gz
-tar zxvf deposit-ubuntu-18.04-x86_64.tar.gz
-```
-
-:::
 
 
 

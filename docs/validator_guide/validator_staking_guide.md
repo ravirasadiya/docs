@@ -77,7 +77,7 @@ Approve the Stake transaction to commit the 32 Mil PLS requried to the `Offical 
 
 ### Step 6 - Check data
 
-You can check “Managed PLS, Public key List Rewards, Reward Details” in `My Data` page and check the pool data in the `Pool Data` page after 32 PLS staked successfully. This may take time to update while in a `pending` state.
+You can check your Managed PLS and Public key List Rewards on `My Data` page and check the pool data in the `Pool Data` page after 32 PLS staked successfully i.e `Active`. While the validator is in a `pending` state the values may not reflect the updated amounts. 
 
 ![Vouch PLS Staking Validator](/validator/vouchvalidator_12.png)
 
