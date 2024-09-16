@@ -2,14 +2,14 @@
 
 ## Introduction
 
-The Vouch protocol supports two types of validators: solo validators and trusted validators. Solo validators are permissionless, which means that anyone can deposit 12 PLS and run a node to become a solo validator. The principle of running either a Solo Validator or a Trusted Validator are the same from a technical configuration point of view.
+The Vouch protocol supports two types of validators: solo validators and trusted validators. Solo validators are permissionless, which means that anyone can deposit 12Mil PLS and run a node to become a solo validator. The principle of running either a Solo Validator or a Trusted Validator are the same from a technical configuration point of view.
 
 **The comparison between Solo Validator and Trusted Validator:**
 
 | Type | PLS Self-deposited | PLS Allocation from Pool | Permission |
 | :------------ | :---------: | :---------: | :---------: |
-| Solo Validator | 12 PLS | 20 PLS | Permissionless |
-| Trusted Validator | 0 PLS | 32 PLS | Permissioned |
+| Solo Validator | 12Mil PLS | 20Mil PLS | Permissionless |
+| Trusted Validator | 0 PLS | 32Mil PLS | Permissioned |
 
 
 ## How to become a solo validator
@@ -25,21 +25,17 @@ The remainder of this Validator Staking Guide, will assume the operator of the v
 
 ### Pulsechain Validator Resources
 
-**Oficial Gitlab** - Repository of all the software for running validator nodes: 
-
-https://gitlab.com/pulsechaincom
-
-**Gamma's Page** - Great resouce for Pulsechain Networks Settings and include a validator setup guide:
-
-https://www.g4mm4.io/ 
-
-**Dipslayer Setup Scripts** - The best scripted (menu driven) setup guide for installing and managing Pulsechain validators:
-
-https://github.com/JexxaJ/DS_install_pulse_node
+**[Official Pulsechain Gitlab](https://gitlab.com/pulsechaincom)** - Repository of all the software for running validator nodes: 
 
 
+**[Gamma's Site](https://www.g4mm4.io)** - Great resouce for Pulsechain Networks Settings and include a validator setup guide:
 
-**Recommended Hardware Requirements**
+ 
+
+**[Dipslayer Setup Scripts](https://github.com/tdslaine/install_pulse_node)** - The best scripted (menu driven) setup guide for installing and managing Pulsechain validators:
+
+
+### Recommended Min Hardware Requirements
 | Resouce | Recomended Specs | Notes |
 | :------------ | :---------: | :---------: |
 | Disk Storage | 2TB | SSD or NVMe (disk intensive)

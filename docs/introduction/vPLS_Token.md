@@ -30,7 +30,8 @@ You can stake your token through interacting with the Vouch staking contract dir
 
 Upon staking your native tokens, vPLS will be minted and sent to your designated wallet address based on the amount of native tokens staked ( $Q_s$ ) and the current exchange rate for vPLS ( $C_r$ ).
 
-`$Q_r=Q_s/C_r$`
+> $Q_r=Q_s/C_r$
+
 ​
 For example, if you stake 1.05 PLS and the current exchange rate for vPLS ( $C_r$ ) is 1.05, you will receive 1 vPLS.
 
