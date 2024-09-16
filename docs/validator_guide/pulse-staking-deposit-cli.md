@@ -76,11 +76,26 @@ Withdraw Address Setting: ```0x555E33C8782A0CeF14d2e9064598CE991f58Bc74```
 Prority Fee Address Setting: ```0x4C14073Fa77e3028cDdC60bC593A8381119e9921```
 :::
 
+## Running the Staking-cli Tool.
+
+Extensive documention on using the staking-deposit-cli tool can be found in the [Github repository ReadMe file](https://github.com/Vouchrun/pulse-staking-deposit-cli).
+
+Example Commands
 
 
-```./deposit new-mnemonic --num_validators=3 --mnemonic_language=english --chain=pulsechain-testnet-v4```
 
+:::tabs
 
+== Mainnet
+```
+./deposit new-mnemonic --num_validators=10 --mnemonic_language=english --chain=pulsechain
+```
+
+== Testnet
+```
+./deposit new-mnemonic --num_validators=10 --mnemonic_language=english --chain=pulsechain-testnet-v4
+```
+:::
 
 
 

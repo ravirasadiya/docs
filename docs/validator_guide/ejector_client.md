@@ -134,6 +134,7 @@ It is preferred to run your Ejector client using something like `systemd` `TMUX`
 
 :bulb: 
 If you are unfamiliar with Running `TMUX` you should learn how to navigate it first before running the below commands.
+This [TMUX guide](https://tmuxcheatsheet.com/) might help.
 
 ```
 sudo apt install tmux
