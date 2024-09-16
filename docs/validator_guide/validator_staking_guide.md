@@ -82,7 +82,7 @@ You can check your Managed PLS and Public key List Rewards on `My Data` page and
 ![Vouch PLS Staking Validator](/validator/vouchvalidator_12.png)
 
 ::: warning
-You still need to activate your validator keys on your validator hardwarw as per normal. If you fail to do this you will start losing rewards and get penalised. 
+You still need to activate your validator client with the corresponding `validator_keys` on your validator hardware as per normal. If you fail to do this you will start losing rewards and get penalised. 
 :::
 
 :nerd_face: Possible Reasons for staking failure

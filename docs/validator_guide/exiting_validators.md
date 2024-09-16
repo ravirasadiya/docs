@@ -6,4 +6,10 @@ Assuming you are using Prysm, voluntarily exiting your validator from the Ethere
 - Select the account(s) that should be exited. This step can be skipped by specifying the account(s) via the --public-keys flag when issuing the validator exit command.
 - Confirm your understanding of the consequences of exiting your validator by typing Exit my validator when prompted.
 
-More details please follow this [exit doc](https://docs.prylabs.network/docs/wallet/exiting-a-validator).
+More details please follow the official documents for your client of choice:
+
+[Prysm Exit Documentation](https://docs.prylabs.network/docs/wallet/exiting-a-validator).
+
+[Lighthouse Exit Documentation](https://lighthouse-book.sigmaprime.io/voluntary-exit.html).
+
+

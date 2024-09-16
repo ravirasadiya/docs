@@ -25,6 +25,6 @@ export default {
     );
   },
   enhanceApp({ app }) {
-    enhanceAppWithTabs(app)
+  enhanceAppWithTabs(app)
   }
 };

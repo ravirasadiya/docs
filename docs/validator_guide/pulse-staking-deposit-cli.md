@@ -66,7 +66,7 @@ Node Prority Fee Address set to the Vouch `Fee_Pool` contract address
 :::tabs
 
 == Mainnet
-Withdraw Address Setting: ```0xWITHDRAWAL```
+Withdraw Address Setting: ```0xNETWORK_WITHDRAW```
 
 Prority Fee Address Setting: ```0xFEE_POOL```
 
@@ -80,30 +80,6 @@ Prority Fee Address Setting: ```0x4C14073Fa77e3028cDdC60bC593A8381119e9921```
 
 ```./deposit new-mnemonic --num_validators=3 --mnemonic_language=english --chain=pulsechain-testnet-v4```
 
-```
-./deposit.sh existing-mnemonic
-linux-gnu
-Running deposit-cli...
-
-***Using the tool on an offline and secure device is highly recommended to keep your mnemonic safe.***
-
-Please enter your mnemonic separated by spaces (" "). Note: you only need to enter the first 4 letters of each word if you'd prefer.: abuse april random flash service typical uncover ginger pupil social angle slot siren tool blush dinner they also camp pen school deal review album
-Enter the index (key number) you wish to start generating more keys from. For example, if you've generated 4 keys in the past, you'd enter 4 here. [0]:
-Please repeat the index to confirm: 0
-Please choose how many new validators you wish to run: 3
-Please enter the amount that a validator must deposit (type 0 for trust node, solo nodes need such as 4000000, 8000000 or 12000000 etc, you can find it in the doc): 12000000 --hel
-Please enter withdrawal recipient address: 0x99F7C7c951dEF272ee5638eA7Cc731b1f09B12e0
-
-you are setting 0x99F7C7c951dEF272ee5638eA7Cc731b1f09B12e0 as your withdrawal address
-
-Repeat your withdrawal recipient address for confirmation: 0x99F7C7c951dEF272ee5638eA7Cc731b1f09B12e0
-
-you are setting 0x99F7C7c951dEF272ee5638eA7Cc731b1f09B12e0 as your withdrawal address
-
-Please choose the (mainnet or testnet) network/chain name ['mainnet', 'goerli', 'sepolia', 'zhejiang', 'pulsechain', 'pulsechain-devnet', 'pulsechain-testnet-v4']:  [mainnet]: pulsechain-testnet-v4
-Create a password that secures your validator keystore(s). You will need to re-enter this to decrypt them when you setup your Ethereum validators.:
-Repeat your keystore password for confirmation:
-```
 
 
 
@@ -111,10 +87,7 @@ Repeat your keystore password for confirmation:
 
 
 
-
-
-
-
+## WIP
 
 Run a Node on ETH2 Mainnet
 Run a node on ETH2 mainnet by Prysm
