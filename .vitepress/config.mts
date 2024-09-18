@@ -46,7 +46,7 @@ export default defineConfig({
           height: 315,
           parameters: {
             rel: 0,
-            start: 18 // start the video at 18 seconds
+            start: 0, // start the video at 18 seconds
           }
         }
       });
