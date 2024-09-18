@@ -44,10 +44,10 @@ export default defineConfig({
         youtube: {
           width: 560,
           height: 315,
-          parameters: {
-            rel: 0,
-            start: 0, // start the video at 18 seconds
-          }
+          // parameters: {
+          rel: 0,
+          start: 10, // start the video at 18 seconds
+          // }
         }
       });
     },

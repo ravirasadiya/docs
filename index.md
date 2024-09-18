@@ -28,7 +28,7 @@ features:
      width: 90
     title: Vouch Protocol Docs
     details: This guide is a living document, more information will be added regularly.
-    link: /docs/introduction/vPLS_Token
+    link: /docs/introduction/intro_to_LSD
   - icon:
      src: /image/TGLogo.svg
      width: 82
