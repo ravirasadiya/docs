@@ -62,10 +62,12 @@ There are some configuration items which need to be set to run the Ejector Clien
 
 ### Configuration Items
 
+:bulb: The below exmaples are using Geth and Lighthouse, you will need to make sure the ports used match your client configuration. 
+
 | config | description | example value |
 | --- | --- | --- |
-| consensus_endpoint | Execution RPC endpoint | http://127.0.0.1:8545 |
-| execution_endpoint | Consensus (Beacon chain) RPC endpoint | http://127.0.0.1:5052 or public RPC |
+| execution_endpoint | Execution RPC endpoint | http://127.0.0.1:8545 |
+| consensus_endpoint | Consensus (Beacon chain) RPC endpoint | http://127.0.0.1:5052 or public RPC |
 | keys_dir | keystore path created by [pulse-staking-deposit-cli](https://github.com/Vouchrun/pulse-staking-deposit-cli) | ./validator_keys |
 | withdraw_address | Contract address of NetworkWithdraw | `0xNETWORK_WITHDRAW` |
 
@@ -102,6 +104,9 @@ pls-lsd-ejector start \
 
 == Mainnet Example
 ```bash
+# This assumes you have your keys in the /blockchain/validator_keys dir
+# Change to suit your setup.
+
 pls-lsd-ejector start \
     --consensus_endpoint http://127.0.0.1:5052 \
     --execution_endpoint https://rpc-pulsechain.g4mm4.io \
@@ -111,6 +116,9 @@ pls-lsd-ejector start \
 
 == Testnet Example
 ```bash
+# This assumes you have your keys in the /blockchain/validator_keys dir
+# Change to suit your setup.
+
 pls-lsd-ejector start \
     --consensus_endpoint http://127.0.0.1:5052 \
     --execution_endpoint https://rpc-testnet-pulsechain.g4mm4.io \

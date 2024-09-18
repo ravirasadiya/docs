@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import imageFigures from 'markdown-it-image-figures';
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
+import markdownItVideo from 'markdown-it-video';
 
 
 // https://vitepress.dev/reference/site-config
@@ -38,8 +39,18 @@ export default defineConfig({
         figcaption: 'title',
         copyAttrs: '^class$',
       }),
-      md.use(tabsMarkdownPlugin);
-     },
+      md.use(tabsMarkdownPlugin),
+      md.use(markdownItVideo, {
+        youtube: {
+          width: 560,
+          height: 315,
+          parameters: {
+            rel: 0,
+            start: 18 // start the video at 18 seconds
+          }
+        }
+      });
+    },
   },
   ignoreDeadLinks: [
     // ignore all localhost links
@@ -54,9 +65,9 @@ function docs(){
       text: "Introduction",
       collapsed: false,
       items: [
-        // {text: "Get Started", link: "/docs/introduction/getstarted"},
+        {text: "Intro to LSDs", link: "/docs/introduction/intro_to_LSD"},
+        {text: "Vouch Overview", link: "/docs/introduction/vouch_overview"},
         {text: "vPLS (LST) Token", link: "/docs/introduction/vPLS_Token"},
-        // {text: "New to LSD Stack", link: "/docs/introduction/newtostack"},
     ]
     },
     // {

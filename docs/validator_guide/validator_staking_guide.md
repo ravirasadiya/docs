@@ -101,4 +101,4 @@ The Ejector service plays an important role in Vouch LSD stack. Every validator 
 
 :::danger Make sure you are running an Ejector Client on your Validator Node
 :::
-Instruction for installing and running and `Ejector Client` can be found [here](/docs/validator_guide/ejector_client).
+Instructions for installing and running an `Ejector Client` can be found [here](/docs/validator_guide/ejector_client).

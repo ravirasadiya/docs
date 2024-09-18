@@ -1,5 +1,12 @@
 # Get Started
 
+
+
+[![YouTube Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg =640x480)](https://youtu.be/qidl4je6IAY?si=Iutv2fnz6WYam9BC)
+
+    details: Intrduction to liquid staking on Pulsechain in 6 minutes!
+    link: https://youtu.be/qidl4je6IAY?si=Iutv2fnz6WYam9BC
+
 ## What is it?
 
 StaFi LSD Stack is a LSD(Liquid Staking Derivative) stack, developed and maintained by [61 LAB](https://61lab.io/#), mainly built for developers who want to create LSTs(Liquid Staking Token). With StaFi LSD Stack, you can build a new LST by simply clicking, while gaining LST's composability and programability. This stack will save your workload, your resource, your budget on development and maintenance, you can review the stack if you are seeking for a development framework to launch a new LST.

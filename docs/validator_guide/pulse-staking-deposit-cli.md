@@ -38,31 +38,35 @@ cd pulse-staking-deposit-cli
 
 ### Step 3. Installation
 
-Install the dependencies:
+1. Install pip
+```
+sudo apt-get install python3-pip
+```
+
+2. Install the dependencies:
 
 ```sh
-pip3 install -r requirements.txt
-python3 setup.py install
+sudo pip3 install -r requirements.txt
+sudo python3 setup.py install
 ```
 
 Or use the helper script:
 
 ```sh
-./deposit.sh install
+sudo ./deposit.sh install
 ```
 
 ## Generate Keystore, Deposit and Staking Files
 
-### Before you Start
+### Step 1. Before you Start
 
 Prior to generating your keystores and the corresponding `deposit_data` and `staking_data` files, you need to take note of two things:
 1. The Withdrawal Address must be set to the Vouch `Network_Withdraw` contract address when generating keys.
 2. Your Nodes `suggested-fee-recipient` must be set to the Vouch `Fee_Pool` contract address (see below section).
 
 
->[!CAUTION]
-> You MUST set your WITHDRAWAL address correctly to the `Network_Withdraw` contract address when generating your Keys.
-
+:::danger You MUST set your WITHDRAWAL address correctly to the `Network_Withdraw` contract address when generating your Keys.
+:::
 :::tabs
 
 == Mainnet Withdrawal Address
@@ -77,22 +81,54 @@ Prior to generating your keystores and the corresponding `deposit_data` and `sta
 
 :::
 
-### Running the Staking-cli Tool.
+### Step 2. Running the Staking-cli Tool.
 
-[Extensive documention](https://github.com/Vouchrun/pulse-staking-deposit-cli) on the staking-deposit-cli tool can be found in the Github repository ReadMe file. This will provide all the configurable settings and ways you can use the tool to generate keystores and deposit files using either new or existing mnemonic seed words. Please use that documentation and instructions for assistance with running the staking-cli-tool
+This will Create your keys, `deposit_data-*.json` and `staking_data-*.json` files.
+
+[Extensive documention](https://github.com/Vouchrun/pulse-staking-deposit-cli) on the staking-deposit-cli tool can be found in the Github repository ReadMe file. This will provide all the configurable settings and ways you can use the tool to generate keystores and deposit files using either new or existing mnemonic seed words. Please refer that documentation and instructions for assistance with running the staking-cli-tool if required.
+
+
+:::danger Make sure your input `12000000` (12Mil) for the deposit amount when prompted.
+:::
+
+
+Run one of the following command to enter the interactive CLI:
+
+```sh
+./deposit.sh new-mnemonic
+```
+
+or
+
+```sh
+./deposit.sh existing-mnemonic
+```
+
+You can also run the tool with optional arguments:
+
+```sh
+./deposit.sh new-mnemonic --num_validators=<NUM_VALIDATORS> --mnemonic_language=english --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
+```
+
+```sh
+./deposit.sh existing-mnemonic --num_validators=<NUM_VALIDATORS> --validator_start_index=<START_INDEX> --chain=<CHAIN_NAME> --folder=<YOUR_FOLDER_PATH>
+```
+
+
 
 Basic Example Commands for New Mnemonic:
 
 :::tabs
 
 == Mainnet
+
 ```sh
-./deposit new-mnemonic --num_validators=10 --mnemonic_language=english --chain=pulsechain
+./deposit new-mnemonic --num_validators=10 --chain=pulsechain --folder=/blockchain/validators
 ```
 
 == Testnet
 ```sh
-./deposit new-mnemonic --num_validators=10 --mnemonic_language=english --chain=pulsechain-testnet-v4
+./deposit new-mnemonic --num_validators=10 --chain=pulsechain-testnet-v4 --folder=/blockchain/validators 
 ```
 :::
 
@@ -101,6 +137,9 @@ This command will generate a set of files (in your chosen output directory) whic
 2. `staking_data-*.json` file, used to send remaining 20Mil PLS to Pulsechain staking contract.
 3. One or more (10 in this example) Keystore files which need to be imported on your valdiator.
 
+
+:::warning Make sure you BACKUP your mnemonic words and record the password used to protect your keys, you will need this password when setting up your [Ejector Client](/docs/validator_guide/ejector_client)
+:::
 
 ## Setting your Suggested Fee Recipient
 
