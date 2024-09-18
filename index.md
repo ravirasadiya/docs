@@ -40,13 +40,13 @@ features:
       width: 150
     title: Learn about Liquid Staking
     details: Introdcution to liquid staking on Pulsechain in 6 minutes!
-    link: https://youtu.be/qidl4je6IAY?si=Iutv2fnz6WYam9BC
+    link: /docs/introduction/intro_to_LSD
   - icon:
       src: /image/video2.png
       width: 150
     title: Understanding Vouch LSD
-    details: Understanding Vouch LSD Protocol in 9 minutes!
-    link: https://youtu.be/vZwRh15oPHM?si=VEM4am8cgxE9XRJQ
+    details: Understanding Vouch LSD Protocol in 9 minutes! 
+    link: /docs/introduction/vouch_overview
   #   details: Learn what Liquid Staking Derivatives and Liquid Staking Tokens are.
   #   link: /docs/architecture/ethlsd
   # - title: User Staking Guide
