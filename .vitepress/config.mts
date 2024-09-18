@@ -115,7 +115,7 @@ function docs(){
           //   collapsed: true,
           //   items: [
           //       {text: "Get Started", link: "/docs/architecture/components/getstarted"},
-          //       {text: "Contract", link: "/docs/architecture/components/contract"},
+          //       {text: "Contracts", link: "/docs/architecture/components/contracts"},
           //       {text: "Relay", link: "/docs/architecture/components/relay"},
           //       {text: "Validator", link: "/docs/architecture/components/validator"},
           //       {text: "Ejector", link: "/docs/architecture/components/ejector"},
