@@ -119,7 +119,7 @@ function docs(){
           {text: "Vouch LSD Protool", link: "/docs/architecture/vouch_lsd"},
           {
           text: "Components",
-            collapsed: true,
+            collapsed: false,
             items: [
           //       {text: "Get Started", link: "/docs/architecture/components/getstarted"},
           //       {text: "Contracts", link: "/docs/architecture/components/contract"},

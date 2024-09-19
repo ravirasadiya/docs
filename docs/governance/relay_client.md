@@ -73,39 +73,41 @@ Have these ready so you can configure the relay client with these unique setting
 
 ### Relay section
 
-| config | description | example value | recommended value |
-| --- | --- | --- | --- |
-| account | voter account addressMake sure you imported it before using |0xa63747c.....62534| |
-| trustNodeDepositAmount     | the trust node validator initial deposit amount | 1000000  |  |
-| eth2EffectiveBalance       | the effective balance of a validator            | 32000000 |  |
-| maxPartialWithdrawalAmount | max partial withdrawal amount                   | 8000000  |  |
-| gasLimit    |  |  | 3000000 |
-| maxGasPrice |  |  | 1000000000000 (in wei) |
-| batchRequestBlocksNumber | a number which limits concurrent requests on Beacon chain, due to the design of Beacon chain RPC |  | 32 |
-| runForEntrustedLsdNetwork | set this config to true only if you are one of the entrusted voters who are responsible to relay data for entrusted LSD networks | false | false |
+| config | description | example value  (recommended) |
+| --- | --- | --- |
+| account | voter account addressMake sure you imported it before using |0xYOUR_ACCOUNT| |
+| trustNodeDepositAmount     | the trust node validator initial deposit amount | 1000000  |
+| eth2EffectiveBalance       | the effective balance of a validator            | 32000000 |
+| maxPartialWithdrawalAmount | The threshold used to differentiate between rewards and exit balance. If the amount received from Beacon chain is less than this value, it is treated as rewards; otherwise, it is considered as exit balance.                   | 8000000  |
+| gasLimit    |  |3000000 |
+| maxGasPrice |  |600 (in Gwei) |
+| batchRequestBlocksNumber | a number which limits concurrent requests on Beacon chain, due to the design of Beacon chain RPC |16 (32 Max) |
+| runForEntrustedLsdNetwork | set this config to true only if you are one of the entrusted voters who are responsible to relay data for entrusted LSD networks | false |
+
+
 
 ### Pinata section
 
-| config | description | recommended value |
+| config | description | example value  (recommended) |
 | --- | --- | --- |
-| apikey  | apikey of your pinata account |   |
+| apikey  | apikey of your pinata account | YOUR_API_KEY  |
 | pinDays | how many days the data retained on IPFS  | 180 |
 
 ### Contracts section
 
-| config | description | example value | recommended value |
-| --- | --- | --- | --- |
-| lsdTokenAddress | lsd token address |  |  |
-| lsdFactoryAddress | lsd factory address |  |  |
+| config | description | example value  (recommended) |
+| --- | --- | --- |
+| lsdTokenAddress | lsd token address | see `config.toml` below |
+| lsdFactoryAddress | lsd factory address |see `config.toml` below |
 
 ### Endpoints section
 
 Groups of eth1 and eth2 endpoints. It will be used only if previous ones are not available.
 
-| config | description | example value | recommended value |
-| --- | --- | --- | --- |
-| eth1 | Execution RPC endpoint | https://rpc-pulsechain.g4mm4.io |  |
-| eth2 | Consensus (Beacon chain) RPC endpoint | https://rpc-pulsechain.g4mm4.io/beacon-api/ |  |
+| config | description | example value |
+| --- | --- | --- | 
+| eth1 | Execution RPC endpoint | https://rpc-pulsechain.g4mm4.io |  
+| eth2 | Consensus (Beacon chain) RPC endpoint | https://rpc-pulsechain.g4mm4.io/beacon-api/ |  
 
 
 ### Example `config.toml` file
@@ -123,8 +125,8 @@ trustNodeDepositAmount     = 1000000  # PLS
 eth2EffectiveBalance       = 32000000 # PLS
 maxPartialWithdrawalAmount = 8000000  # PLS
 gasLimit = "3000000"
-maxGasPrice = "60000000000"                            #wei
-batchRequestBlocksNumber = 32
+maxGasPrice = "600"                            #Gwei
+batchRequestBlocksNumber = 16
 runForEntrustedLsdNetwork = false
 
 [pinata]
@@ -148,8 +150,8 @@ trustNodeDepositAmount     = 1000000  # PLS
 eth2EffectiveBalance       = 32000000 # PLS
 maxPartialWithdrawalAmount = 8000000  # PLS
 gasLimit = "3000000"
-maxGasPrice = "60000000000"                            #wei
-batchRequestBlocksNumber = 32
+maxGasPrice = "600"                            #Gwei
+batchRequestBlocksNumber = 16
 runForEntrustedLsdNetwork = false
 
 [pinata]
@@ -223,3 +225,32 @@ Note: Logging level can be adjusted if required for trouble shooting.
 ```
 --log-level string   The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
 ```
+
+## Updating the Relay Client
+
+### Get the latest Client
+Update the client files by navigating to the orginal install directory and pulling the latest Relay client from the github repository. 
+
+```bash
+cd $HOME/pls-lsd-relay # assumes home dir was root of install 
+git pull https://github.com/Vouchrun/pls-lsd-relay.git
+```
+
+### Re-run the installation process as outlined above.
+
+:bulb: Do not run make install as sudo
+```bash
+cd pls-lsd-relay
+make install
+```
+
+### Re-start the client
+
+```bash
+sudo pls-lsd-relay start --base-path /blockchain/relay/ --log-level info
+```
+
+Respond with the required information when prompted:
+> `> password for key:` #enter password created in above step
+
+That is it, just make sure the Ejector client runs at all times!
