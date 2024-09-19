@@ -85,7 +85,7 @@ function docs(){
 
         {
           text: "Validator Guide", // https://docs.stafi.io/ethvalidator/
-          collapsed: false,
+          collapsed: true,
           items: [
             {text: "Getting Started", link: "/docs/validator_guide/getting_started"},
             {text: "Validator Staking Guide", link: "/docs/validator_guide/validator_staking_guide"},
@@ -104,36 +104,36 @@ function docs(){
             // }
           ]
         },
-
+        {
+          text: "Governance",
+          collapsed: true,
+          items: [
+            // {text: "Introduction", link: "/docs/governance/introduction"},
+            {text: "Relay Client (Voter)", link: "/docs/governance/relay_client"},
+          ]
+        },
       {
         text: "Architecture",
-        collapsed: false,
+        collapsed: true,
         items: [
           {text: "Vouch LSD Protool", link: "/docs/architecture/vouch_lsd"},
-          // {
-          // text: "Components",
-          //   collapsed: true,
-          //   items: [
+          {
+          text: "Components",
+            collapsed: true,
+            items: [
           //       {text: "Get Started", link: "/docs/architecture/components/getstarted"},
           //       {text: "Contracts", link: "/docs/architecture/components/contract"},
-          //       {text: "Relay", link: "/docs/architecture/components/relay"},
+                {text: "Relay", link: "/docs/architecture/components/relay"},
           //       {text: "Validator", link: "/docs/architecture/components/validator"},
           //       {text: "Ejector", link: "/docs/architecture/components/ejector"},
           //       {text: "App", link: "/docs/architecture/components/ethlsdapp"},
           //       {text: "Validator App", link: "/docs/architecture/components/ethlsd_validator_app"},
           //       {text: "Deploy", link: "/docs/architecture/components/deploy"},
           //       {text: "Point System", link: "/docs/architecture/components/point_system"},
-          //     ]
-          //   }
+              ]
+            }
           ]
         },
-    // {
-    //   text: "DAO",
-    //   collapsed: true,
-    //   items: [
-    //     {text: "Introduction", link: "/docs/dao/introduction"},
-    //   ]
-    // },
     // {
     //   text: "Security",
     //   collapsed: true,
