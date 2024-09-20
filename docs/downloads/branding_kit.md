@@ -10,7 +10,7 @@
 
 | Vouch| vPLS Dark | vPLS Transparent |
 | --- | --- | --- |
-|![Vouch Logo Icon](/public/branding/VouchLogoT.svg){width=150} |![vPLS Token Icon](/public/branding/vPLS.svg){width=150} |![vPLS Token Icon](/public/branding/vPLS_Trans.svg){width=150}|
+|![Vouch Logo Icon](/public/branding/VouchLogoT.svg){width=150} |![vPLS Token Icon](/public/branding/vPLS.svg){width=150} |![vPLS Token Icon](/public/branding/vPLS_trans.svg){width=150}|
 
 ## Vouch Colours
 
