@@ -240,7 +240,7 @@ git pull https://github.com/Vouchrun/pls-lsd-relay.git
 
 :bulb: Do not run make install as sudo
 ```bash
-cd pls-lsd-relay
+cd $HOME/pls-lsd-relay
 make install
 ```
 

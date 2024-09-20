@@ -134,6 +134,13 @@ function docs(){
             }
           ]
         },
+        {
+          text: "Downloads",
+          collapsed: true,
+          items: [
+            {text: "Branding kit", link: "/docs/downloads/branding_kit/"},
+          ]
+        },
     // {
     //   text: "Security",
     //   collapsed: true,
