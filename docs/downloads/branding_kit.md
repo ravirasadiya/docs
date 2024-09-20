@@ -8,7 +8,7 @@
 
 ## Vouch Icons
 
-| Vouch Icon| vPLS Logo Dark | vPLS Logo Transparent |
+| Vouch| vPLS Dark | vPLS Transparent |
 | --- | --- | --- |
 |![Vouch Logo Icon](/public/branding/VouchLogoT.svg){width=150} |![vPLS Token Icon](/public/branding/vPLS.svg){width=150} |![vPLS Token Icon](/public/branding/vPLS_Trans.svg){width=150}|
 
