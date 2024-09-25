@@ -4,21 +4,23 @@ layout: home
 title: LSD Stack Documentation
 
 hero:
-  name: "Vouch Protocol" 
-  text: Liquid Staking on PulseChain
-  tagline: Get Your Share of Pulsechain's Yield!
+  name: "Liquid Staking" 
+  text:  on Pulsechain
+  tagline: Get Your Share of Pulsechain Yield!
   image:
-    src: /image/logo.svg
+    light: /image/VouchFullLight.png
+    dark: /image/VouchFullDark.png
+    width: 400
     alt: Vouch LSD Protocol
   actions:
     # - theme: brand
     #   text: Get Started
     #   link: /docs/introduction/getstarted
     - theme: brand
-      text: Launch User Dapp (testnet)
+      text: Launch User App (testnet)
       link: https://app.vouch.run
     - theme: alt
-      text: Launch Validator Dapp (testnet)
+      text: Launch Validator App (testnet)
       link: https://val.vouch.run
 
 features:

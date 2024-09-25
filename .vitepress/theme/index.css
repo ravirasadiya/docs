@@ -13,9 +13,6 @@ figcaption {
   margin: 0.25rem 0 1.25rem;
 }
 
-/* :root {
-  --vp-home-hero-name-color: #FF8533;
-} */
 
 :root {
   --vp-home-hero-name-color: transparent;
