@@ -15,10 +15,10 @@ hero:
     #   text: Get Started
     #   link: /docs/introduction/getstarted
     - theme: brand
-      text: Launch User Dapp
+      text: Launch User Dapp (testnet)
       link: https://app.vouch.run
     - theme: alt
-      text: Launch Validator Dapp
+      text: Launch Validator Dapp (testnet)
       link: https://val.vouch.run
 
 features:
