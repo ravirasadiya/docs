@@ -16,5 +16,5 @@ figcaption {
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(180deg, #FF8533, #4F8CEF);
+  --vp-home-hero-name-background: -webkit-linear-gradient(270deg, #4F8CEF,#4F8CEF,#FF8533, #FF8533);
 }
