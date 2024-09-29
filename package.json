@@ -12,6 +12,7 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
+    "elkjs": "^0.9.3",
     "markdown-it-image-figures": "^2.1.1",
     "markdown-it-video": "^0.6.3",
     "medium-zoom": "^1.1.0"

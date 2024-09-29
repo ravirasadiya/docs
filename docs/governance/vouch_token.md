@@ -7,18 +7,19 @@ https://www.mermaidchart.com/play#pako:eNplkVFrwjAUhf_KJQ9DH-LefRDWdWMPbgvaloEVj
 ```mermaid
 ---
 config:
- layout: elk
- look: classic 
- theme: dark
+  layout: elk
+  look: classic 
+  theme: dark
 ---
-flowchart TB
+
+flowchart TD
   
   VT(("`VOUCH Token`")) 
   DEX{"`DEX VOUCH/vPLS LP`"} 
   VR["`Vouch Router`"]
   UD["`UserDeposit`"]
   BnB["`Buy & Burn`"]
-  PD["`Pulsechain Deposit`"]
+  PD["`Pulsechain Deposit Contract`"]
   Pool((("`Vouch PLS Pool`")))
   Vals[("`Valdiator Nodes`")] 
 
@@ -29,11 +30,22 @@ flowchart TB
   UD -- "Pooled PLS" --> Pool -- "Stake PLS" -->PD
   VR -- "buy and burn" --> BnB
   BnB -- "Buy & Burn VOUCH" --> DEX
-  PD -. Validating .-> Vals
-
+  subgraph Pulsechain Validating
+   direction LR
+   PD -. Validating .-> Vals
+  end
+  
   
   
   
 %%   style DEX2 stroke:#000000,fill:#E1F0D4 
 %%   style VR2 stroke:#000000,fill:#C3EFE0 
 ```
+
+
+<!-- ---
+config:
+ layout: elk
+ look: classic 
+ theme: dark
+--- -->
