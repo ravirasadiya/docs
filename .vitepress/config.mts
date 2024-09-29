@@ -2,10 +2,11 @@ import { defineConfig } from 'vitepress'
 import imageFigures from 'markdown-it-image-figures';
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 import markdownItVideo from 'markdown-it-video';
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: "Vouch LSD",
   description: "Liquid Staking Derivatives on Pulsechain",
   themeConfig: {
@@ -23,7 +24,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-
     outline: {
       level: [1,4],
       // label: 'Contents',
@@ -44,19 +44,21 @@ export default defineConfig({
         youtube: {
           width: 560,
           height: 315,
-          // parameters: {
           rel: 0,
           start: 10, // start the video at 18 seconds
-          // }
         }
       });
     },
+  },
+  mermaid: {
+    // Mermaid configuration options go here
+    // theme: 'default', // default, forest, dark, neutral
   },
   ignoreDeadLinks: [
     // ignore all localhost links
     /^https?:\/\/localhost/,
   ],
-})
+}));
 
 
 function docs(){
@@ -109,6 +111,7 @@ function docs(){
           collapsed: true,
           items: [
             // {text: "Introduction", link: "/docs/governance/introduction"},
+            {text: "VOUCH Token", link: "/docs/governance/vouch_token"},
             {text: "Relay Client (Voter)", link: "/docs/governance/relay_client"},
           ]
         },
@@ -139,6 +142,7 @@ function docs(){
           collapsed: true,
           items: [
             {text: "Branding kit", link: "/docs/downloads/branding_kit/"},
+            {text: "Audits", link: "/docs/downloads/Audits/"},
           ]
         },
     // {
