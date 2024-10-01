@@ -113,7 +113,7 @@ function docs(){
           collapsed: true,
           items: [
             // {text: "Introduction", link: "/docs/governance/introduction"},
-            {text: "VOUCH Token", link: "/docs/governance/vouch_token"},
+            // {text: "VOUCH Token", link: "/docs/governance/vouch_token"},
             {text: "Relay Client (Voter)", link: "/docs/governance/relay_client"},
           ]
         },

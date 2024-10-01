@@ -6,6 +6,7 @@ The Ejector service plays an important role in PLS LSD stack. As users are free 
 
 ## Installation
 
+
 ### Install Build Tools
 On your Validating Node make sure you have the following tools installed, you will need these to continue.
 
@@ -39,6 +40,8 @@ go version
 :::
 
 
+
+
 ### Install Ejector Client
 Below we will clone the requried Ejector repo from the Vouch github repository and install it.
 - repo will be cloned into ~/pls-lsd-ejector
@@ -53,7 +56,6 @@ make install
 
 ::: warning This will install the `pls-lsd-ejector` application in the default `GOPATH` location which is `~/go/bin`. If you wish to change the applications location, simply move it to the location of your choice e.g. `/blockchain/ejector`
 :::
-
 
 
 ## Running the Ejector Client
@@ -154,3 +156,111 @@ Then Issue the above `Start Command` in the TMUX terminal using the instructions
 If your environment has mulitple keys_dir locations or you have used multiple keystore passwords, it is possible to run mulitple version of the ejector client on the same Node. The ejector will also detect keystores in subdirectories if required.
 
 In this case `TMUX` will be a big help for starting and monitoring your Ejector client.
+
+
+## Installing Docker (test and finalise)
+
+https://docs.docker.com/engine/install/ubuntu/
+
+```sh
+#!/bin/bash
+
+echo ""
+
+# Downloading Docker
+
+echo -e "${GREEN}Adding Docker PPA and installing Docker${NC}"
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu
+\
+$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+# install the docker service engine
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+clear
+echo -e "${GREEN}Starting and enabling docker service${NC}"
+sudo systemctl start docker
+sudo systemctl enable docker 
+```
+
+
+
+## Using Docker to run Ejector
+
+:::tabs
+
+== Format
+```sh
+sudo docker run  --name ejector -it -e KEYSTORE_PASSWORD="actual_password" --restart always -v "/PATH_TO_KEYS":/keys ghcr.io/vouchrun/pls-lsd-ejector:main start \
+    --consensus_endpoint 'BEACON_CHAIN_RPC_ENDPOINT' \
+    --execution_endpoint 'EXECUTION_RPC_ENDPOINT'  \
+    --keys_dir ./validator_keys \
+    --withdraw_address '0x_NETWORK_WITHDRAW_CONTRACT_ADDR'
+```
+
+
+== Mainnet Example
+### Run in interactive mode
+```sh
+# runs docker container in interactive mode 
+# use Ctrl+P followed by Ctrl+Q to detach from docker container and leave it running
+# remove [="actual_password"] to input password at startup, container will cache password
+
+docker run  --name ejector -it -e KEYSTORE_PASSWORD="actual_password" --restart always -v "/blockchain/validator_keys":/keys ghcr.io/vouchrun/pls-lsd-ejector:main start \
+--consensus_endpoint https://rpc-pulsechain.g4mm4.io/beacon-api \
+--execution_endpoint https://rpc-pulsechain.g4mm4.io \
+--keys_dir /keys \
+--withdraw_address '0x_NETWORK_WITHDRAW_CONTRACT_ADDR'
+```
+
+### Run in detached mode
+```sh
+# runs docker container in deatched mode 
+# follow docker logs to view status of ejector
+
+docker run  --name ejector -it -e KEYSTORE_PASSWORD="actual_password" --restart always -v "/blockchain/validator_keys":/keys ghcr.io/vouchrun/pls-lsd-ejector:main start \
+--consensus_endpoint https://rpc-pulsechain.g4mm4.io/beacon-api \
+--execution_endpoint https://rpc-pulsechain.g4mm4.io \
+--keys_dir /keys \
+--withdraw_address '0x_NETWORK_WITHDRAW_CONTRACT_ADDR'
+```
+
+== Testnet Example
+### Run in interactive mode
+```sh
+# runs docker container in interactive mode 
+# use Ctrl+P followed by Ctrl+Q to detach from docker container and leave it running
+# remove [="actual_password"] to input password at startup, container will cache password
+
+docker run  --name ejector -it -e KEYSTORE_PASSWORD="actual_password" --restart always -v "/blockchain/validator_keys":/keys ghcr.io/vouchrun/pls-lsd-ejector:main start \
+--consensus_endpoint https://rpc-testnet-pulsechain.g4mm4.io/beacon-api \
+--execution_endpoint https://rpc-testnet-pulsechain.g4mm4.io \
+--keys_dir /keys \
+--withdraw_address 0x555E33C8782A0CeF14d2e9064598CE991f58Bc74
+```
+
+### Run in detached mode
+```sh
+# runs docker container in deatched mode 
+# follow docker logs to view status of ejector
+
+docker run  --name ejector -it -e KEYSTORE_PASSWORD="actual_password" --restart always -v "/blockchain/validator_keys":/keys ghcr.io/vouchrun/pls-lsd-ejector:main start \
+--consensus_endpoint https://rpc-testnet-pulsechain.g4mm4.io/beacon-api \
+--execution_endpoint https://rpc-testnet-pulsechain.g4mm4.io \
+--keys_dir /keys \
+--withdraw_address 0x555E33C8782A0CeF14d2e9064598CE991f58Bc74
+```
+:::
+
