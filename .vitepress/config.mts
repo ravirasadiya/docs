@@ -5,7 +5,6 @@ import markdownItVideo from 'markdown-it-video';
 import { withMermaid } from "vitepress-plugin-mermaid";
 import elk from "elkjs";
 
-
 // https://vitepress.dev/reference/site-config
 export default withMermaid(defineConfig({
   title: "Vouch LSD",
@@ -55,6 +54,9 @@ export default withMermaid(defineConfig({
     // Mermaid configuration options go here
     elk: elk,
     // theme: 'default', // default, forest, dark, neutral
+  },
+  data: {
+    myVariable: 'Hello, World!',
   },
   ignoreDeadLinks: [
     // ignore all localhost links
@@ -113,7 +115,7 @@ function docs(){
           collapsed: true,
           items: [
             // {text: "Introduction", link: "/docs/governance/introduction"},
-            // {text: "VOUCH Token", link: "/docs/governance/vouch_token"},
+            {text: "VOUCH Token", link: "/docs/governance/vouch_token"},
             {text: "Relay Client (Voter)", link: "/docs/governance/relay_client"},
           ]
         },
