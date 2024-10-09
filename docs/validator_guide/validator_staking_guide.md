@@ -12,17 +12,38 @@ Connect your wallet and select solo validator by clicking the `Next`.
 
 ### Step 2 - Upload deposit file
 
-You will need a `deposit_data` file, this is created when you generate your validator keys using the  `pulse-staking-deposit-cli` tool. Use [these instructions](/docs/validator_guide/pulse-staking-deposit-cli) to generate your keys and files.
 
-::: info This is akin to using the standard Pulsechain `Staking Deposti Cli` tool. 
-:::
+You will need a `deposit_data` file, this is created when you generate your validator keys using the  `pulse-staking-deposit-cli` tool. 
 
-Generate your Validator Keys and corresponding deposit and staking files before proceeding.
+Vouch have created a useful `vouch-validator-tools` GUI tool for generating your keys and associated deposit and staking files. Using this tool guides you through producing the required files, or you can take the more traditaional hands on approach if you need more control. 
 
-::: tip When you generate your keys using the `pulse-staking-deposit-cli` tool, you will create two files 
+#### Option 1: Guided GUI approach
+
+Clone the tools to your home directory
+```sh
+cd $HOME && sudo apt update && sudo apt install git && git clone https://github.com/Vouchrun/vouch-val-tools.git
+```
+
+Run the tools GUI menu
+```sh 
+cd $HOME/vouch-val-tools && find "$HOME/vouch-val-tools" -type f -name "*.sh" -exec chmod +x {} \; && ./vouch-menu.sh
+```
+Follow the onscreen Prompts
+
+![vouch-val-tool](/validator/vouch-val-tool.png)
+
+
+
+#### Option 2: Traditional staking-deposit-cli approach
+Use [these instructions](/docs/validator_guide/pulse-staking-deposit-cli) to generate your keys and files.
+
+::: tip Regardless of the option you choose above, when you generate your keys using the `pulse-staking-deposit-cli` tool, you will create two files 
 `deposit_data-*.json` and `staking_data-*.json` In this step you are using the `deposit_data-*.json` file. In following steps we will use the `staking_data-*.json` file.
 :::
 
+
+::: warning Generate your Validator Keys and corresponding deposit and staking files before proceeding. 
+:::
 
 On the “Deposit” page, upload the deposit file(deposit_data-*.json) obtained above, you will see “File uploaded successfully ” if you have done this correctly.
 
