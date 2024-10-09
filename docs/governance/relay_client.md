@@ -187,7 +187,7 @@ docker stop relay
 docker rm relay
 
 # run relay to import-account 
-docker run --name relay -it --restart always -v "/blockchain/relay":/keys ghcr.io/vouchrun/pls-lsd-relay:main import-account \
+docker run --name relay -it --restart unless-stopped -v "/blockchain/relay":/keys ghcr.io/vouchrun/pls-lsd-relay:main import-account \
 --base-path /keys
 
 ```
@@ -213,7 +213,7 @@ docker stop relay
 docker rm relay
 
 # run relay with prompt for password 
-docker run --name relay -it -e KEYSTORE_PASSWORD --restart always -v "/blockchain/relay":/keys
+docker run --name relay -it -e KEYSTORE_PASSWORD --restart unless-stopped -v "/blockchain/relay":/keys
 ghcr.io/vouchrun/pls-lsd-relay:main start \
 --base-path /keys
 ```
