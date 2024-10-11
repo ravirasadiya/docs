@@ -124,6 +124,26 @@ eth2 = "https://rpc-testnet-pulsechain.g4mm4.io/beacon-api/"
 
 ## Run Using Docker
 
+### Installation
+
+:::tabs
+== Quick Install
+
+The below command will:
+- Install Docker (if not already installed)
+- Configure relay directory and config.toml file
+- Import Relay account private keys
+- Enable automatic OS and relay updates (optional)
+- Start the Relay docker container the first time
+
+
+Note: this command needs to be run as root.
+
+```bash
+curl -sL https://raw.githubusercontent.com/Vouchrun/pls-lsd-relay/refs/heads/main/node-install.sh > node-install.sh; bash node-install.sh
+```
+
+== Detailed Install
 ### Installing Docker (optional - if not alredy installed)
 
 
@@ -184,7 +204,7 @@ You will also set the password for this private key, each time the relay is re-s
 ```sh
 # clean up any running containers
 docker stop relay
-docker rm relay
+docker container prune -f
 
 # run relay to import-account 
 docker run --name relay -it --restart unless-stopped -v "/blockchain/relay":/keys ghcr.io/vouchrun/pls-lsd-relay:main import-account \
@@ -201,22 +221,63 @@ Respond with the required information when prompted:
 ::: 
 
 
-### Start The Relay Client
+### Starting The Relay Client
+This assumes you are using the default container name of "relay" if you have changed this to anything else during the install process you will need to modify the commands below to suit. 
 
+:::tabs
+== Start in interactive mode
+
+
+- Runs docker container in interactive mode and prompts for password at startup
+- Use Ctrl+P followed by Ctrl+Q to detach from docker container and leave it running
+
+**Clean up any running containers**
 ```sh
-# Runs docker container in interactive mode and prompts for password at startup
-# Use Ctrl+P followed by Ctrl+Q to detach from docker container and leave it running
-# Modify -e switch to [-e KEYSTORE_PASSWORD="actual_password"] to pass a password at startup
-
-# clean up any running containers
 docker stop relay
-docker rm relay
-
-# run relay with prompt for password 
-docker run --name relay -it -e KEYSTORE_PASSWORD --restart unless-stopped -v "/blockchain/relay":/keys
-ghcr.io/vouchrun/pls-lsd-relay:main start \
---base-path /keys
+docker container prune -f
 ```
+**Run relay with prompt for password**
+```sh
+docker run --name relay -it -e KEYSTORE_PASSWORD --restart unless-stopped -v "/blockchain/relay":/keys ghcr.io/vouchrun/pls-lsd-relay:main start --base-path /keys
+```
+
+== Start in detached mode
+
+- Runs docker container in deatched mode and prompts for password at startup
+- Follow docker logs to view status of relay
+
+**Clean up any running containers**
+```sh
+docker stop relay
+docker container prune -f
+```
+
+**Run relay with prompt for password**
+```sh
+read -s -p "Enter keystore password: " KEYSTORE_PASSWORD && docker run --name relay -d -e "KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD" --restart unless-stopped -v "/blockchain/relay/testnet":/keys ghcr.io/vouchrun/pls-lsd-relay:main start --base-path /keys
+```
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
