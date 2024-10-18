@@ -18,10 +18,10 @@ hero:
     #   link: /docs/introduction/getstarted
     - theme: brand
       text: Launch User App (testnet)
-      link: https://app.vouch.run
+      link: https://testnet.app.vouch.run
     - theme: alt
       text: Launch Validator App (testnet)
-      link: https://val.vouch.run
+      link: https://testnet.val.vouch.run
 
 features:
   - icon:
