@@ -41,7 +41,7 @@ features:
       src: /image/video1.png
       width: 150
     title: Learn about Liquid Staking
-    details: Introdcution to liquid staking on Pulsechain in 6 minutes!
+    details: Introduction to liquid staking on Pulsechain in 6 minutes!
     link: /docs/introduction/intro_to_LSD
   - icon:
       src: /image/video2.png
