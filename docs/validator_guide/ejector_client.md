@@ -42,8 +42,26 @@ If your environment has mulitple keys_dir locations or you have used multiple ke
 
 ## Run Using Docker
 
-### Installing Docker (optional - if not alredy installed)
+### Installation
 
+:::tabs
+== Quick Install
+
+The below command will:
+- Install Docker (if not already installed)
+- Configure ejector directory to point to keystores
+- Enable automatic OS and ejector container updates (optional)
+- Start the ejector docker container the first time
+
+
+Note: this command needs to be run as root.
+
+```bash
+curl -sL https://raw.githubusercontent.com/Vouchrun/pls-lsd-ejector/refs/heads/main/ejector-install.sh > ejector-install.sh; bash ejector-install.sh
+```
+
+== Detailed Install
+### Installing Docker (optional - if not alredy installed)
 
 Clean up conflicting versions and install docker
 
@@ -85,6 +103,7 @@ Verify that the Docker Engine Installed (Optional)
 ```sh
 sudo docker run hello-world
 ```
+:::
 
 ### Start the Ejector Client
 
