@@ -71,7 +71,7 @@ Prior to generating your keystores and the corresponding `deposit_data` and `sta
 
 == Mainnet Withdrawal Address
 ```
-0xNETWORK_WITHDRAW
+0x1F082785Ca889388Ce523BF3de6781E40b99B060
 ```
 
 == Testnet Withdrawal Address
@@ -155,7 +155,7 @@ FeePool Contract Address:
 == Mainnet FeePool Address
 
 ```
-0xFEE_POOL
+0x5eAd01d58067a68D0D700374500580eC5C961D0d
 ```
 
 == Testnet FeePool Address
