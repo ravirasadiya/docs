@@ -76,18 +76,18 @@ trustNodeDepositAmount     = 1000000  # PLS
 eth2EffectiveBalance       = 32000000 # PLS
 maxPartialWithdrawalAmount = 8000000  # PLS
 gasLimit = "3000000"
-maxGasPrice = "1200"                            #Gwei
+maxGasPrice = "200000"                #Gwei
 batchRequestBlocksNumber = 16
 runForEntrustedLsdNetwork = false
 
 [pinata]
 # Example apikey only - register for a Free Pinata account and create your own API Key
-apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.yJ1c2VySW5mb3JtYXsdioufhasoiufhsidkfjhsdkjlfhskdjlhfsidkhfsdkjhfksjdfhsdkjfhsdkjfhsdjk834902349-0sdfh89u2340923409uisdfvu79hg3249j0324-09uy8v89s-0dsdfiojnk32902398wefhseu8fsfg234982387gsbv92834789234t87gwegsd89sd98fgh23479g82389asdt8g234798237489ysg29348923489yfg2397498289s7as6as78dghh8ui2389239ag98732498234tyagd28937498y_4"
+apikey = "YOUR_API_KEY"
 pinDays = 180
 
 [contracts]
-lsdTokenAddress = "0xLSD_TOKEN_ADDRESS"
-lsdFactoryAddress = "0xLSD_FACTORY_ADDRESS"
+lsdTokenAddress = "0x79BB3A0Ee435f957ce4f54eE8c3CFADc7278da0C"
+lsdFactoryAddress = "0xE27Df917b7557f0B427c768e90819D1e6Db70F1E"
 
 [[endpoints]]
 eth1 = "https://rpc-pulsechain.g4mm4.io"
@@ -102,13 +102,13 @@ trustNodeDepositAmount     = 1000000  # PLS
 eth2EffectiveBalance       = 32000000 # PLS
 maxPartialWithdrawalAmount = 8000000  # PLS
 gasLimit = "3000000"
-maxGasPrice = "1200"                            #Gwei
+maxGasPrice = "1200"                  #Gwei
 batchRequestBlocksNumber = 16
 runForEntrustedLsdNetwork = false
 
 [pinata]
 # Example apikey only - register for a Free Pinata account and create your own API Key
-apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.yJ1c2VySW5mb3JtYXsdioufhasoiufhsidkfjhsdkjlfhskdjlhfsidkhfsdkjhfksjdfhsdkjfhsdkjfhsdjkfhsdkjlaksdf8998239309249234h239iu0949-0h92834902349-0sdfh89u2340923409uisdfvu79hg3249j0324-09uy8v89s-0dsdfiojnk32902398wefhseu8fsfg234982387gsbv92834789234t87gwegsd89sd98fgh23479g82389asdt8g234798237489ysg29348923489yfg2397498289s7as6as78dghh8ui2389239ag98732498234tyagd28937498y_4"
+apikey = "YOUR_API_KEY"
 pinDays = 180
 
 [contracts]

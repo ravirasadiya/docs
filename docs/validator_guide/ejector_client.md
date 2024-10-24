@@ -21,14 +21,14 @@ However before running the client you need to choose which way you would like to
 | execution_endpoint | Execution RPC endpoint | http://127.0.0.1:8545 |
 | consensus_endpoint | Consensus (Beacon chain) RPC endpoint | http://127.0.0.1:5052 or public RPC |
 | keys_dir | keystore path created by [pulse-staking-deposit-cli](https://github.com/Vouchrun/pulse-staking-deposit-cli) | ./validator_keys |
-| withdraw_address | Contract address of NetworkWithdraw | `0xNETWORK_WITHDRAW` |
+| withdraw_address | Contract address of NetworkWithdraw | `0x1F082785Ca889388Ce523BF3de6781E40b99B060` |
 
 :::tabs
 
 == Mainnet
-Withdraw Address Setting: ```0xNETWORK_WITHDRAW```
+Withdraw Address Setting: ```0x1F082785Ca889388Ce523BF3de6781E40b99B060```
 
-Prority Fee Address Setting: ```0xFEE_POOL```
+Prority Fee Address Setting: ```0x5eAd01d58067a68D0D700374500580eC5C961D0d```
 
 == Testnet
 Withdraw Address Setting: ```0x555E33C8782A0CeF14d2e9064598CE991f58Bc74```
@@ -130,7 +130,7 @@ docker run  --name ejector -it -e KEYSTORE_PASSWORD="actual_password" --restart 
 --consensus_endpoint https://rpc-pulsechain.g4mm4.io/beacon-api \
 --execution_endpoint https://rpc-pulsechain.g4mm4.io \
 --keys_dir /keys \
---withdraw_address '0x_NETWORK_WITHDRAW_CONTRACT_ADDR'
+--withdraw_address '0x1F082785Ca889388Ce523BF3de6781E40b99B060'
 ```
 
 ### Run in detached mode
@@ -142,7 +142,7 @@ docker run  --name ejector -it -e KEYSTORE_PASSWORD="actual_password" --restart 
 --consensus_endpoint https://rpc-pulsechain.g4mm4.io/beacon-api \
 --execution_endpoint https://rpc-pulsechain.g4mm4.io \
 --keys_dir /keys \
---withdraw_address '0x_NETWORK_WITHDRAW_CONTRACT_ADDR'
+--withdraw_address '0x1F082785Ca889388Ce523BF3de6781E40b99B060'
 ```
 
 == Testnet Example
@@ -254,7 +254,7 @@ pls-lsd-ejector start \
     --consensus_endpoint http://127.0.0.1:5052 \
     --execution_endpoint https://rpc-pulsechain.g4mm4.io \
     --keys_dir /blockchain/validator_keys \
-    --withdraw_address '0x_NETWORK_WITHDRAW_CONTRACT_ADDR'
+    --withdraw_address '0x1F082785Ca889388Ce523BF3de6781E40b99B060'
 ```
 
 == Testnet Example
