@@ -17,12 +17,12 @@ hero:
     #   text: Get Started
     #   link: /docs/introduction/getstarted
     - theme: brand
-      text: Launch User App (testnet)
-      link: https://testnet.app.vouch.run
+      text: Launch User App
+      link: https://app.vouch.run
+      background: black
     - theme: alt
-      text: Launch Validator App (testnet)
-      link: https://testnet.val.vouch.run
-
+      text: Launch Validator App
+      link: https://val.vouch.run
 features:
   - icon:
      light: /image/book.svg
