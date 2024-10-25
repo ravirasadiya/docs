@@ -23,14 +23,3 @@ figcaption {
   --vp-c-default-3: #FF8533;
   --vp-c-default-2: #4F8CEF;
 }
-
-.vp-button-brand {
-  background-color: #ff8533;
-  color: #ffffff;
-}
-
-.vp-button-alt {
-  background-color: #6610f2;
-  color: #ffffff;
-}
-
