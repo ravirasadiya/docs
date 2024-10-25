@@ -2,6 +2,9 @@
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
+# theme configuration items
+https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+
 ## Syntax Highlighting
 
 VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
