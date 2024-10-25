@@ -17,4 +17,19 @@ figcaption {
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(270deg, #4F8CEF,#4F8CEF,#FF8533, #FF8533);
+  --vp-c-brand-1: #FF8533;
+  --vp-c-brand-2: #FF8533;
+  --vp-c-brand-1: #FF8533;
+  --vp-c-brand-2: #FF8533;
 }
+
+.vp-button-brand {
+  background-color: #ff8533;
+  color: #ffffff;
+}
+
+.vp-button-alt {
+  background-color: #6610f2;
+  color: #ffffff;
+}
+
