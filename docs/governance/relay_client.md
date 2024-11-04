@@ -76,7 +76,7 @@ trustNodeDepositAmount     = 1000000  # PLS
 eth2EffectiveBalance       = 32000000 # PLS
 maxPartialWithdrawalAmount = 8000000  # PLS
 gasLimit = "3000000"
-maxGasPrice = "200000"                #Gwei
+maxGasPrice = "500000"                #Gwei
 batchRequestBlocksNumber = 16
 runForEntrustedLsdNetwork = false
 
@@ -203,8 +203,8 @@ You will also set the password for this private key, each time the relay is re-s
 
 ```sh
 # clean up any running containers
-docker stop relay
-docker container prune -f
+sudo docker stop relay
+sudo docker rm relay
 
 # run relay to import-account 
 docker run --name relay -it --restart unless-stopped -v "/blockchain/relay":/keys ghcr.io/vouchrun/pls-lsd-relay:main import-account \
@@ -233,12 +233,12 @@ This assumes you are using the default container name of "relay" if you have cha
 
 **Clean up any running containers**
 ```sh
-docker stop relay
-docker container prune -f
+sudo docker stop relay
+sudo docker rm relay
 ```
 **Run relay with prompt for password**
 ```sh
-docker run --name relay -it -e KEYSTORE_PASSWORD --restart unless-stopped -v "/blockchain/relay":/keys ghcr.io/vouchrun/pls-lsd-relay:main start --base-path /keys
+sudo docker run --pull always --name relay -it -e KEYSTORE_PASSWORD --restart unless-stopped -v "/blockchain/relay":/keys ghcr.io/vouchrun/pls-lsd-relay:main start --base-path /keys
 ```
 
 == Start in detached mode
@@ -248,13 +248,13 @@ docker run --name relay -it -e KEYSTORE_PASSWORD --restart unless-stopped -v "/b
 
 **Clean up any running containers**
 ```sh
-docker stop relay
-docker container prune -f
+sudo docker stop relay
+sudo docker rm relay
 ```
 
 **Run relay with prompt for password**
 ```sh
-read -s -p "Enter keystore password: " KEYSTORE_PASSWORD && docker run --name relay -d -e "KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD" --restart unless-stopped -v "/blockchain/relay/testnet":/keys ghcr.io/vouchrun/pls-lsd-relay:main start --base-path /keys
+read -s -p "Enter keystore password: " KEYSTORE_PASSWORD && docker run --pull always --name relay -d -e "KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD" --restart unless-stopped -v "/blockchain/relay/testnet":/keys ghcr.io/vouchrun/pls-lsd-relay:main start --base-path /keys
 ```
 :::
 
