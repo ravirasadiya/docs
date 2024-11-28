@@ -68,7 +68,7 @@ When a node calls the *stake* function in NodeDeposit, the requried amount of 32
 
 ## Node Claim Flow
 
-At regular intervals, voters will flag a checkpoint on the network. Currently, checkpoints occur approx every 24 hours (270 epochs).
+At regular intervals, voters will flag a checkpoint on the network. Currently, checkpoints occur approx every 8 hours (90 epochs).
 
 At a new checkpoint, the voters will collectively create a true snapshot of the state of the node operators in the project network, which it will use to determine deposit and reward PLS for each validator provider during that interval. This information is compiled into a Merkle Tree. The Merkle Tree is built into a formatted data (json file) and hosted on a Decentralized Data Storage (DDS) network such as ipfs or arweave.
 
