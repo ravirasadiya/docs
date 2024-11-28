@@ -76,18 +76,19 @@ function docs(){
         {text: "vPLS (LST) Token", link: "/docs/introduction/vPLS_Token"},
     ]
     },
-    // {
-    //   text: "User Guide", //https://github.com/stafiprotocol/docs/tree/main/pages/stakingeth
-    //   collapsed: false,
-    //   items: [
+    {
+      text: "User Guide", //https://github.com/stafiprotocol/docs/tree/main/pages/stakingeth
+      collapsed: false,
+        items: [
+           {text: "User App Intro", link: "/docs/user_guide/user_staking_intro"},
     //     {text: "Pulsechain Staking", link: "/docs/userguide/plsstaking"},
     //     {text: "How Vouch Staked PLS works", link: "/docs/userguide/frontend"},
     //     {text: "The vPLS token", link: "/docs/userguide/frontend"},
     //     {text: "How to stake PLS", link: "/docs/userguide/frontend"},
     //     {text: "How to unstake PLS", link: "/docs/userguide/frontend"},
     //     {text: "Liquidity Mining", link: "/docs/userguide/frontend"},
-    //   ]
-    // },
+          ]
+    },
 
         {
           text: "Validator Guide", // https://docs.stafi.io/ethvalidator/
