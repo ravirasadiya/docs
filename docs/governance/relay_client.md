@@ -27,11 +27,11 @@ However before running the client you need to choose which way you would like to
 | config | description | example value  (recommended) |
 | --- | --- | --- |
 | account | voter account addressMake sure you imported it before using |0xYOUR_ACCOUNT| |
-| trustNodeDepositAmount     | the trust node validator initial deposit amount | 1000000  |
+| trustNodeDepositAmount     | the trust node validator initial deposit amount taken from PLS pool | 1000000  |
 | eth2EffectiveBalance       | the effective balance of a validator            | 32000000 |
 | maxPartialWithdrawalAmount | The threshold used to differentiate between rewards and exit balance. If the amount received from Beacon chain is less than this value, it is treated as rewards; otherwise, it is considered as exit balance.                   | 8000000  |
-| gasLimit    |  |3000000 |
-| maxGasPrice |  |600 (in Gwei) |
+| gasLimit    | Total gas allowance for transaction, relay will batch larger requests |3000000 |
+| maxGasPrice | Gas Price, note Pulsechain gas is volatile so allow ample for peak periods, relay will hold off sending if network gas requriement is over this limit |10000000 (in Gwei) |
 | batchRequestBlocksNumber | a number which limits concurrent requests on Beacon chain, due to the design of Beacon chain RPC |16 (32 Max) |
 | runForEntrustedLsdNetwork | set this config to true only if you are one of the entrusted voters who are responsible to relay data for entrusted LSD networks | false |
 
@@ -76,7 +76,7 @@ trustNodeDepositAmount     = 1000000  # PLS
 eth2EffectiveBalance       = 32000000 # PLS
 maxPartialWithdrawalAmount = 8000000  # PLS
 gasLimit = "3000000"
-maxGasPrice = "500000"                #Gwei
+maxGasPrice = "10000000"                #Gwei
 batchRequestBlocksNumber = 16
 runForEntrustedLsdNetwork = false
 
