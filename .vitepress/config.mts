@@ -150,15 +150,10 @@ function docs(){
             {text: "Audits", link: "/docs/downloads/audits/"},
           ]
         },
-    // {
-    //   text: "Security",
-    //   collapsed: true,
-    //   items: [
-    //     {text: "Introduction", link: "/docs/security/introduction"},
-    //     {text: "Audit", link: "/docs/security/audit"},
-
-    //   ]
-    // },
+    {
+      text: "Terms of Use",
+      link: "/docs/terms/terms.md"
+    },
     // {
     //   text: "Concepts",
     //   collapsed: true,
