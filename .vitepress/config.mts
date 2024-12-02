@@ -156,7 +156,7 @@ function docs(){
     },
     // {
     //   text: "Concepts",
-    //   collapsed: true,
+    //   collapsed: false,
     //   items: [
     //     {text: "Ethereum Staking", link: "/docs/concepts/ethstaking"},
     //     {text: "LSD & LST", link: "/docs/concepts/lstlsd"},
