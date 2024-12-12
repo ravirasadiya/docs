@@ -17,12 +17,17 @@ hero:
     #   text: Get Started
     #   link: /docs/introduction/getstarted
     - theme: brand
-      text: Launch User App
+      text: User App
       link: https://app.vouch.run
-      background: black
     - theme: alt
-      text: Launch Validator App
+      text: IPFS User App
+      link: https://bafybeiduwolkkbpcab5x4w3g7kohpllfaxeqia7ed66taxrcnhrghedgby.ipfs.dweb.link/
+    - theme: brand
+      text: Validator App
       link: https://val.vouch.run
+    - theme: alt
+      text: IPFS Validator App
+      link: https://bafybeiddd5qaeylqs7opbjktw5hjn3oxkgc5low45ruttwsal745uozwy4.ipfs.dweb.link/
 features:
   - icon:
      light: /image/book.svg
