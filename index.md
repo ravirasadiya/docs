@@ -21,13 +21,13 @@ hero:
       link: https://app.vouch.run
     - theme: alt
       text: IPFS User App
-      link: https://bafybeiduwolkkbpcab5x4w3g7kohpllfaxeqia7ed66taxrcnhrghedgby.ipfs.dweb.link/
+      link: https://bafybeih222if5nnsgs645ju3kau5fmdnod42dnm62dv3b6g4him2c2fkmu.ipfs.dweb.link/
     - theme: brand
       text: Validator App
       link: https://val.vouch.run
     - theme: alt
       text: IPFS Validator App
-      link: https://bafybeiddd5qaeylqs7opbjktw5hjn3oxkgc5low45ruttwsal745uozwy4.ipfs.dweb.link/
+      link: https://bafybeic6k6g5vmxd7yuvoaegrwqpbbqwmeooishvwkmzdew7espcny6pru.ipfs.dweb.link/
 features:
   - icon:
      light: /image/book.svg
