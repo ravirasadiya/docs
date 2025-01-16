@@ -11,6 +11,17 @@ The Vouch protocol supports two types of validators: solo validators and trusted
 | Solo Validator | 12Mil PLS | 20Mil PLS | Permissionless |
 | Trusted Validator | 0 PLS | 32Mil PLS | Permissioned |
 
+::: warning What is the maximum number validators I can run?
+
+In short you can run as many as you wish, however;
+
+When running validators in Vouch you can deposit and stake multiple
+Validators from the same deposit address (i.e. Connected Account).
+In Vouch we call this the "Node Addr". It is `strongly advised to NOT  
+exceed 300 pubkeys per connected account`, while this is a soft limit, 
+for security and performance reasons you should use muliple connected
+accounts if you intend on running more than 300 validators.
+:::
 
 ## How to become a solo validator
 
