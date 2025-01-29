@@ -27,7 +27,7 @@ hero:
       link: https://val.vouch.run
     - theme: alt
       text: IPFS Validator App
-      link: https://dweb.link/ipfs/bafybeidhhpurqlvkmuhpsyqusvrtc6lfv33hauzht32zhji2c23emknrwy
+      link: https://dweb.link/ipfs/bafybeiafloun5633e7v7gilkk37ynyl32ydqm5zpgdlmscdcusfbctzdk4
 features:
   - icon:
      light: /image/book.svg
