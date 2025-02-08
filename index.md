@@ -5,7 +5,7 @@ title: Vouch.run
 head:
   - - meta
     - property: 'og:image'
-      content: https://vouch.run/image/Vouch_Meta.webp"
+      content: https://vouch.run/image/Vouch_Meta.webp
     - name: 'twitter:card'
       content: "summary"
     
