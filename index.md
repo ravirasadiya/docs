@@ -6,12 +6,15 @@ head:
   - - meta
     - property: 'og:image'
       content: https://vouch.run/image/Vouch_Meta.webp
-    - name: 'twitter:card'
-      content: "summary"
-    
-    # - name="twitter:card"
-    # - name: 'twitter:image'
-    #   content: https://vouch.run/image/VouchFullDark.png
+  - - meta
+    - name: "twitter:card"
+      content: "summary_large_image"
+  - - meta
+    - name: "twitter:image"
+      content: https://vouch.run/image/Vouch_Meta.webp   
+  - - meta
+    - name: "twitter:title"
+      content: " "       
 
 hero:
   name: "Liquid Staking" 
