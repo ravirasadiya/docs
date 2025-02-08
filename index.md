@@ -2,7 +2,17 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 title: Vouch.run
-  
+head:
+  - - meta
+    - property: 'og:image'
+      content: https://vouch.run/image/Vouch_Meta.webp"
+    - name: 'twitter:card'
+      content: "summary"
+    
+    # - name="twitter:card"
+    # - name: 'twitter:image'
+    #   content: https://vouch.run/image/VouchFullDark.png
+
 hero:
   name: "Liquid Staking" 
   text:  on Pulsechain
