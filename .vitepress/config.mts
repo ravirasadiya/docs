@@ -7,7 +7,7 @@ import elk from "elkjs";
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid(defineConfig({
-  title: "Vouch LSD",
+  title: "Liquid Staking",
   description: "Liquid Staking Derivatives on Pulsechain",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
