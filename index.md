@@ -1,7 +1,20 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-title: LSD Stack Documentation
+title: Vouch.run
+head:
+  - - meta
+    - property: 'og:image'
+      content: https://vouch.run/image/Vouch_Meta.webp
+  - - meta
+    - name: "twitter:card"
+      content: "summary_large_image"
+  - - meta
+    - name: "twitter:image"
+      content: https://vouch.run/image/Vouch_Meta.webp   
+  - - meta
+    - name: "twitter:title"
+      content: " "       
 
 hero:
   name: "Liquid Staking" 
@@ -21,13 +34,13 @@ hero:
       link: https://app.vouch.run
     - theme: alt
       text: IPFS User App
-      link: https://bafybeiduwolkkbpcab5x4w3g7kohpllfaxeqia7ed66taxrcnhrghedgby.ipfs.dweb.link/
+      link: https://dweb.link/ipfs/bafybeibu5yyi67xr4k3crl4yrqfmyl7n4jdst444lsec5rmwj7doiybfuy
     - theme: brand
       text: Validator App
       link: https://val.vouch.run
     - theme: alt
       text: IPFS Validator App
-      link: https://bafybeiddd5qaeylqs7opbjktw5hjn3oxkgc5low45ruttwsal745uozwy4.ipfs.dweb.link/
+      link: https://dweb.link/ipfs/bafybeiafloun5633e7v7gilkk37ynyl32ydqm5zpgdlmscdcusfbctzdk4
 features:
   - icon:
      light: /image/book.svg
